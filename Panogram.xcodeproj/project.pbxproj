@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
+		06CAECDB1F036EFF00D16E19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* ViewController.swift */; };
+		06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECDC1F036EFF00D16E19 /* Main.storyboard */; };
+		06CAECE01F036EFF00D16E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECDF1F036EFF00D16E19 /* Assets.xcassets */; };
+		06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */; };
+		06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
+		06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECF81F036F0000D16E19 /* PanogramUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06CAECEA1F036F0000D16E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CAECCD1F036EFF00D16E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CAECD41F036EFF00D16E19;
+			remoteInfo = Panogram;
+		};
+		06CAECF51F036F0000D16E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CAECCD1F036EFF00D16E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CAECD41F036EFF00D16E19;
+			remoteInfo = Panogram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06CAECD51F036EFF00D16E19 /* Panogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		06CAECDA1F036EFF00D16E19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06CAECDD1F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06CAECDF1F036EFF00D16E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06CAECE21F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06CAECE41F036EFF00D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CAECE91F036F0000D16E19 /* PanogramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanogramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECED1F036F0000D16E19 /* PanogramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramTests.swift; sourceTree = "<group>"; };
+		06CAECEF1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECF81F036F0000D16E19 /* PanogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramUITests.swift; sourceTree = "<group>"; };
+		06CAECFA1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06CAECD21F036EFF00D16E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECE61F036F0000D16E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECF11F036F0000D16E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06CAECCC1F036EFF00D16E19 = {
+			isa = PBXGroup;
+			children = (
+				06CAECD71F036EFF00D16E19 /* Panogram */,
+				06CAECEC1F036F0000D16E19 /* PanogramTests */,
+				06CAECF71F036F0000D16E19 /* PanogramUITests */,
+				06CAECD61F036EFF00D16E19 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		06CAECD61F036EFF00D16E19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECD51F036EFF00D16E19 /* Panogram.app */,
+				06CAECE91F036F0000D16E19 /* PanogramTests.xctest */,
+				06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06CAECD71F036EFF00D16E19 /* Panogram */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECD81F036EFF00D16E19 /* AppDelegate.swift */,
+				06CAECDA1F036EFF00D16E19 /* ViewController.swift */,
+				06CAECDC1F036EFF00D16E19 /* Main.storyboard */,
+				06CAECDF1F036EFF00D16E19 /* Assets.xcassets */,
+				06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */,
+				06CAECE41F036EFF00D16E19 /* Info.plist */,
+			);
+			path = Panogram;
+			sourceTree = "<group>";
+		};
+		06CAECEC1F036F0000D16E19 /* PanogramTests */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECED1F036F0000D16E19 /* PanogramTests.swift */,
+				06CAECEF1F036F0000D16E19 /* Info.plist */,
+			);
+			path = PanogramTests;
+			sourceTree = "<group>";
+		};
+		06CAECF71F036F0000D16E19 /* PanogramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECF81F036F0000D16E19 /* PanogramUITests.swift */,
+				06CAECFA1F036F0000D16E19 /* Info.plist */,
+			);
+			path = PanogramUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06CAECD41F036EFF00D16E19 /* Panogram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CAECFD1F036F0000D16E19 /* Build configuration list for PBXNativeTarget "Panogram" */;
+			buildPhases = (
+				06CAECD11F036EFF00D16E19 /* Sources */,
+				06CAECD21F036EFF00D16E19 /* Frameworks */,
+				06CAECD31F036EFF00D16E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Panogram;
+			productName = Panogram;
+			productReference = 06CAECD51F036EFF00D16E19 /* Panogram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06CAECE81F036F0000D16E19 /* PanogramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CAED001F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramTests" */;
+			buildPhases = (
+				06CAECE51F036F0000D16E19 /* Sources */,
+				06CAECE61F036F0000D16E19 /* Frameworks */,
+				06CAECE71F036F0000D16E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CAECEB1F036F0000D16E19 /* PBXTargetDependency */,
+			);
+			name = PanogramTests;
+			productName = PanogramTests;
+			productReference = 06CAECE91F036F0000D16E19 /* PanogramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06CAECF31F036F0000D16E19 /* PanogramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CAED031F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramUITests" */;
+			buildPhases = (
+				06CAECF01F036F0000D16E19 /* Sources */,
+				06CAECF11F036F0000D16E19 /* Frameworks */,
+				06CAECF21F036F0000D16E19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CAECF61F036F0000D16E19 /* PBXTargetDependency */,
+			);
+			name = PanogramUITests;
+			productName = PanogramUITests;
+			productReference = 06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06CAECCD1F036EFF00D16E19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Tera Mo Labs";
+				TargetAttributes = {
+					06CAECD41F036EFF00D16E19 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					06CAECE81F036F0000D16E19 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 06CAECD41F036EFF00D16E19;
+					};
+					06CAECF31F036F0000D16E19 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 06CAECD41F036EFF00D16E19;
+					};
+				};
+			};
+			buildConfigurationList = 06CAECD01F036EFF00D16E19 /* Build configuration list for PBXProject "Panogram" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06CAECCC1F036EFF00D16E19;
+			productRefGroup = 06CAECD61F036EFF00D16E19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06CAECD41F036EFF00D16E19 /* Panogram */,
+				06CAECE81F036F0000D16E19 /* PanogramTests */,
+				06CAECF31F036F0000D16E19 /* PanogramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06CAECD31F036EFF00D16E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */,
+				06CAECE01F036EFF00D16E19 /* Assets.xcassets in Resources */,
+				06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECE71F036F0000D16E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECF21F036F0000D16E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06CAECD11F036EFF00D16E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECDB1F036EFF00D16E19 /* ViewController.swift in Sources */,
+				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECE51F036F0000D16E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECF01F036F0000D16E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06CAECEB1F036F0000D16E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CAECD41F036EFF00D16E19 /* Panogram */;
+			targetProxy = 06CAECEA1F036F0000D16E19 /* PBXContainerItemProxy */;
+		};
+		06CAECF61F036F0000D16E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CAECD41F036EFF00D16E19 /* Panogram */;
+			targetProxy = 06CAECF51F036F0000D16E19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		06CAECDC1F036EFF00D16E19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CAECDD1F036EFF00D16E19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CAECE21F036EFF00D16E19 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06CAECFB1F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06CAECFC1F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06CAECFE1F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = Panogram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06CAECFF1F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = Panogram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06CAED011F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram.app/Panogram";
+			};
+			name = Debug;
+		};
+		06CAED021F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram.app/Panogram";
+			};
+			name = Release;
+		};
+		06CAED041F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Panogram;
+			};
+			name = Debug;
+		};
+		06CAED051F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Panogram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06CAECD01F036EFF00D16E19 /* Build configuration list for PBXProject "Panogram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAECFB1F036F0000D16E19 /* Debug */,
+				06CAECFC1F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06CAECFD1F036F0000D16E19 /* Build configuration list for PBXNativeTarget "Panogram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAECFE1F036F0000D16E19 /* Debug */,
+				06CAECFF1F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06CAED001F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAED011F036F0000D16E19 /* Debug */,
+				06CAED021F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		06CAED031F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAED041F036F0000D16E19 /* Debug */,
+				06CAED051F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06CAECCD1F036EFF00D16E19 /* Project object */;
+}
