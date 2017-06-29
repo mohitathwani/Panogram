@@ -93,6 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0674C4E61F04B6CC00B26DD4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0674C4E81F04B6FA00B26DD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		06CAECCC1F036EFF00D16E19 = {
 			isa = PBXGroup;
 			children = (
@@ -118,14 +134,14 @@
 		06CAECD71F036EFF00D16E19 /* Panogram */ = {
 			isa = PBXGroup;
 			children = (
+				0674C4E61F04B6CC00B26DD4 /* Controllers */,
+				0674C4E81F04B6FA00B26DD4 /* Views */,
 				06CAECD81F036EFF00D16E19 /* AppDelegate.swift */,
-				06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
 				06CAECDC1F036EFF00D16E19 /* Main.storyboard */,
 				06CAECDF1F036EFF00D16E19 /* Assets.xcassets */,
 				06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */,
 				06CAECE41F036EFF00D16E19 /* Info.plist */,
 				06CAED061F0375F900D16E19 /* Extensions.swift */,
-				0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
 			);
 			path = Panogram;
 			sourceTree = "<group>";
