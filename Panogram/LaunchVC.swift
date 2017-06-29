@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Pastel
 
-class ViewController: UIViewController {
+class LaunchVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let backgroundView = LaunchBackgroundView(frame: view.bounds)
+        view.insertSubview(backgroundView, at: 0)
     }
 
     override func didReceiveMemoryWarning() {
