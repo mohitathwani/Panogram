@@ -8,6 +8,7 @@
 
 import UIKit
 import Pastel
+import SnapKit
 
 class LaunchVC: UIViewController {
     
@@ -20,6 +21,13 @@ class LaunchVC: UIViewController {
         
         let backgroundView = LaunchBackgroundView(frame: view.bounds)
         view.insertSubview(backgroundView, at: 0)
+        
+        backgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view)
+            make.bottom.equalTo(self.view)
+            make.leading.equalTo(self.view)
+            make.trailing.equalTo(self.view)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,8 +36,21 @@ class LaunchVC: UIViewController {
         let logoSnapPoint = CGPoint(x: view.center.x, y: view.center.y - 180)
         animator = UIDynamicAnimator(referenceView: view)
         snapBehavior = UISnapBehavior(item: logoImageView, snapTo: logoSnapPoint)
+        animator?.delegate = self
         animator?.addBehavior(snapBehavior!)
         
+    }
+}
+
+extension LaunchVC: UIDynamicAnimatorDelegate {
+    func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
+        print(logoImageView.constraints)
+        logoImageView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view).offset(self.logoImageView.frame.origin.y)
+//            make.centerX.equalTo(self.view)
+//            make.width.equalTo(self.logoImageView.frame.size.width)
+//            make.height.equalTo(self.logoImageView.frame.size.height)
+        }
     }
 }
 

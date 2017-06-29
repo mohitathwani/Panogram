@@ -23,4 +23,8 @@ class LaunchBackgroundView: PastelView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    override func layoutIfNeeded() {
+        print("boogah")
+    }
 }
