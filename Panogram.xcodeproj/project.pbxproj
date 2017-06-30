@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
 		0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
 		06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
 		06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
 		06CAECD51F036EFF00D16E19 /* Panogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */,
 				06CAECE41F036EFF00D16E19 /* Info.plist */,
 				06CAED061F0375F900D16E19 /* Extensions.swift */,
+				0654492C1F06A471009CB3AC /* PhotosManager.swift */,
 			);
 			path = Panogram;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */,
+				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
 				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
 				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,

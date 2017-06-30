@@ -44,6 +44,21 @@ class LaunchVC: UIViewController {
         animator?.addBehavior(snapBehavior!)
         
     }
+    
+    
+    @IBAction func selectImageClicked(_ sender: UIButton) {
+        PhotosManager.sharedManager.requestPermission()
+        if PhotosManager.sharedManager.isAuthorized {
+            
+        }
+        else {
+            let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default, handler: { (action) in
+                UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+            })
+            
+            displayAlert(title: "Panogram needs access to your photos", message: "Please go to the Settings app and grant permission to Panogram to access your photos.", action: openSettingsAction)
+        }
+    }
 }
 
 extension LaunchVC: UIDynamicAnimatorDelegate {
