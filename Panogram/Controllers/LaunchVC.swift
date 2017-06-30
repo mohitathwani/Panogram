@@ -15,7 +15,11 @@ class LaunchVC: UIViewController {
     @IBOutlet weak var logoImageView: UIImageView!
     private var animator: UIDynamicAnimator?
     private var snapBehavior: UISnapBehavior?
+    private var logoSnapPoint: CGPoint {
+        return CGPoint(x: view.center.x, y: view.center.y - 180)
+    }
     
+    @IBOutlet weak var logoCenterYConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +37,7 @@ class LaunchVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        let logoSnapPoint = CGPoint(x: view.center.x, y: view.center.y - 180)
+        
         animator = UIDynamicAnimator(referenceView: view)
         snapBehavior = UISnapBehavior(item: logoImageView, snapTo: logoSnapPoint)
         animator?.delegate = self
@@ -44,12 +48,9 @@ class LaunchVC: UIViewController {
 
 extension LaunchVC: UIDynamicAnimatorDelegate {
     func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
-        print(logoImageView.constraints)
+        view.removeConstraint(logoCenterYConstraint)
         logoImageView.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view).offset(self.logoImageView.frame.origin.y)
-//            make.centerX.equalTo(self.view)
-//            make.width.equalTo(self.logoImageView.frame.size.width)
-//            make.height.equalTo(self.logoImageView.frame.size.height)
+            make.top.equalTo(self.view).offset(logoSnapPoint.y)
         }
     }
 }

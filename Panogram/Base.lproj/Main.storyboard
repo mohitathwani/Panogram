@@ -33,6 +33,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logoCenterYConstraint" destination="rOH-Qw-jIi" id="4WO-2f-pZ6"/>
                         <outlet property="logoImageView" destination="VqS-hx-iqk" id="p9k-k4-3cF"/>
                     </connections>
                 </viewController>
