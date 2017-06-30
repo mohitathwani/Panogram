@@ -26,14 +26,15 @@ extension UIColor {
 }
 
 extension UIViewController {
-    func displayAlert(title: String, message:String, action: UIAlertAction) {
+    func displayAlert(title: String, message:String, action: UIAlertAction?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         
-        alertController.addAction(action)
-        
+        if action != nil {
+            alertController.addAction(action!)
+        }
         present(alertController, animated: true, completion: nil)
     }
 }

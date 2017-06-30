@@ -8,6 +8,10 @@
 
 import Photos
 
+enum FetchError: Error {
+    case collectionFetchError
+}
+
 class PhotosManager {
     static let sharedManager = PhotosManager()
     private init() {}
@@ -22,8 +26,21 @@ class PhotosManager {
         }
     }
     
-    func requestPermission() {
-        PHPhotoLibrary.requestAuthorization {_ in }
+    func requestPermission(completion: @escaping ()->Void) {
+        PHPhotoLibrary.requestAuthorization {_ in
+            completion()
+        }
+    }
+    
+    func fetchImages() throws{
+        let assetCollectionFetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumPanoramas, options: nil)
+        
+        guard let panoramasCollection = assetCollectionFetchResult.firstObject else {
+            
+            throw FetchError.collectionFetchError
+        }
+        print(panoramasCollection)
+//        return nil
     }
     
 }

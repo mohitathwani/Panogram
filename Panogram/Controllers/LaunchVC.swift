@@ -47,16 +47,29 @@ class LaunchVC: UIViewController {
     
     
     @IBAction func selectImageClicked(_ sender: UIButton) {
-        PhotosManager.sharedManager.requestPermission()
-        if PhotosManager.sharedManager.isAuthorized {
-            
+        PhotosManager.sharedManager.requestPermission {
+            if PhotosManager.sharedManager.isAuthorized {
+                self.fetchImages()
+            }
+            else {
+                let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default, handler: { (action) in
+                    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+                })
+                
+                self.displayAlert(title: "Panogram needs access to your photos", message: "Please go to the Settings app and grant permission to Panogram to access your photos.", action: openSettingsAction)
+            }
         }
-        else {
-            let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default, handler: { (action) in
-                UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
-            })
+    }
+    
+    func fetchImages() {
+        do {
+            try PhotosManager.sharedManager.fetchImages()
+        }
+        catch FetchError.collectionFetchError {
+            self.displayAlert(title: "Panoramas not found", message: "Looks like you don't have any panoramas. Open the Camera app to click a panoramic image and come back here to edit it.", action: nil)
+        }
+        catch {
             
-            displayAlert(title: "Panogram needs access to your photos", message: "Please go to the Settings app and grant permission to Panogram to access your photos.", action: openSettingsAction)
         }
     }
 }
