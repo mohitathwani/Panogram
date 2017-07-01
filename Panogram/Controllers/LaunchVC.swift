@@ -76,7 +76,7 @@ class LaunchVC: UIViewController {
 
 extension LaunchVC: UIDynamicAnimatorDelegate {
     func dynamicAnimatorDidPause(_ animator: UIDynamicAnimator) {
-        view.removeConstraint(logoCenterYConstraint)
+        view.removeConstraint(logoCenterYConstraint) //FIXME: This line seems to be causing a problem
         logoImageView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(logoSnapPoint.y)
         }

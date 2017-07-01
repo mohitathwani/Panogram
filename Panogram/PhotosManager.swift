@@ -39,8 +39,19 @@ class PhotosManager {
             
             throw FetchError.collectionFetchError
         }
-        print(panoramasCollection)
-//        return nil
+        
+        let assetsFetchResult = PHAsset.fetchAssets(in: panoramasCollection, options: nil)
+        
+        for i in 0..<assetsFetchResult.count {
+            let asset = assetsFetchResult.object(at: i)
+            let pixelHeight = asset.pixelHeight
+            let pixelWidth = asset.pixelWidth
+            
+            //FIXME: Fix code below.Research on options
+            PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: pixelWidth, height: pixelHeight), contentMode: .default, options: nil, resultHandler: { (image, info) in
+                print(image, info)
+            })
+        }
     }
     
 }
