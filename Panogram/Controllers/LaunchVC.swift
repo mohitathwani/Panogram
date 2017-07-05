@@ -13,15 +13,18 @@ import SVProgressHUD
 
 class LaunchVC: UIViewController {
     
+    @IBOutlet weak var logoCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
+    
     private var animator: UIDynamicAnimator?
     private var snapBehavior: UISnapBehavior?
     private var logoSnapPoint: CGPoint {
         return CGPoint(x: view.center.x, y: view.center.y - 180)
     }
     
-    @IBOutlet weak var logoCenterYConstraint: NSLayoutConstraint!
+    private var images = [UIImage]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -68,9 +71,12 @@ class LaunchVC: UIViewController {
     func fetchImages() {
         do {
             SVProgressHUD.show(withStatus: "Fetching panoramas...")
-            try PhotosManager.sharedManager.fetchImages(completion: { (images) in
+            try PhotosManager.sharedManager.fetchImages(completion: {[weak self] (images) in
                 SVProgressHUD.dismiss()
-                print(images)
+                if self != nil {
+                    self!.images = images
+                    self!.performSegue(withIdentifier: "imageSelectionSegue", sender: nil)
+                }
             })
         }
         catch FetchError.collectionFetchError {
@@ -95,3 +101,12 @@ extension LaunchVC: UIDynamicAnimatorDelegate {
     }
 }
 
+extension LaunchVC {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dVC = segue.destination as? UINavigationController, let imageSelectionVC = dVC.topViewController as? ImageSelectionVC else {
+            return
+        }
+        
+        imageSelectionVC.images = images
+    }
+}

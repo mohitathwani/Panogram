@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
+		065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */; };
 		0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
+		06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */; };
 		06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
 		06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */; };
 		06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECDC1F036EFF00D16E19 /* Main.storyboard */; };
@@ -41,7 +43,9 @@
 
 /* Begin PBXFileReference section */
 		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
+		065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionCell.swift; sourceTree = "<group>"; };
 		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
+		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
 		06CAECD51F036EFF00D16E19 /* Panogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
+				06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
+				065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -471,6 +477,8 @@
 				06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */,
 				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
 				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
+				065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */,
+				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
 				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
 			);
