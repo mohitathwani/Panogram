@@ -13,6 +13,7 @@ import SVProgressHUD
 
 class LaunchVC: UIViewController {
     
+    @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var logoImageView: UIImageView!
     private var animator: UIDynamicAnimator?
     private var snapBehavior: UISnapBehavior?
@@ -33,6 +34,8 @@ class LaunchVC: UIViewController {
             make.leading.equalTo(self.view)
             make.trailing.equalTo(self.view)
         }
+        
+        selectImageButton.alpha = 0.0
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -84,6 +87,10 @@ extension LaunchVC: UIDynamicAnimatorDelegate {
         view.removeConstraint(logoCenterYConstraint) //FIXME: This line seems to be causing a problem
         logoImageView.snp.makeConstraints { (make) in
             make.top.equalTo(self.view).offset(logoSnapPoint.y)
+        }
+        
+        UIView.animate(withDuration: 0.4) {
+            self.selectImageButton.alpha = 1.0
         }
     }
 }
