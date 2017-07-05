@@ -9,6 +9,7 @@
 import UIKit
 import Pastel
 import SnapKit
+import SVProgressHUD
 
 class LaunchVC: UIViewController {
     
@@ -63,7 +64,9 @@ class LaunchVC: UIViewController {
     
     func fetchImages() {
         do {
+            SVProgressHUD.show(withStatus: "Fetching panoramas...")
             try PhotosManager.sharedManager.fetchImages(completion: { (images) in
+                SVProgressHUD.dismiss()
                 print(images)
             })
         }
