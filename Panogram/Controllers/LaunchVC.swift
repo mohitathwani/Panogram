@@ -63,7 +63,9 @@ class LaunchVC: UIViewController {
     
     func fetchImages() {
         do {
-            try PhotosManager.sharedManager.fetchImages()
+            try PhotosManager.sharedManager.fetchImages(completion: { (images) in
+                print(images)
+            })
         }
         catch FetchError.collectionFetchError {
             self.displayAlert(title: "Panoramas not found", message: "Looks like you don't have any panoramas. Open the Camera app to click a panoramic image and come back here to edit it.", action: nil)

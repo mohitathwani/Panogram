@@ -32,25 +32,36 @@ class PhotosManager {
         }
     }
     
-    func fetchImages() throws{
+    func fetchImages(completion:@escaping ([UIImage]) -> Void) throws{
+        
         let assetCollectionFetchResult = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .smartAlbumPanoramas, options: nil)
         
         guard let panoramasCollection = assetCollectionFetchResult.firstObject else {
-            
             throw FetchError.collectionFetchError
         }
         
-        let assetsFetchResult = PHAsset.fetchAssets(in: panoramasCollection, options: nil)
-        
-        for i in 0..<assetsFetchResult.count {
-            let asset = assetsFetchResult.object(at: i)
-            let pixelHeight = asset.pixelHeight
-            let pixelWidth = asset.pixelWidth
+        let queue = DispatchQueue(label: "in.teramolabs.fetchimages")
+        queue.async {
+            let assetsFetchResult = PHAsset.fetchAssets(in: panoramasCollection, options: nil)
+            var imagesArray = [UIImage]()
             
-            //FIXME: Fix code below.Research on options
-            PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: pixelWidth, height: pixelHeight), contentMode: .default, options: nil, resultHandler: { (image, info) in
-                print(image, info)
-            })
+            for i in 0..<assetsFetchResult.count {
+                let asset = assetsFetchResult.object(at: i)
+                
+                let options = PHImageRequestOptions()
+                options.isSynchronous = true
+                
+                PHImageManager.default().requestImageData(for: asset, options: options, resultHandler: { (data, dataUTI, orientation, info) in
+                    guard let imageData = data, let image = UIImage(data: imageData) else {
+                        return
+                    }
+                    imagesArray.append(image)
+                })
+                
+            }
+            DispatchQueue.main.async {
+                completion(imagesArray)
+            }
         }
     }
     
