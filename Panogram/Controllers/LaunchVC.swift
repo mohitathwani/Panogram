@@ -56,7 +56,9 @@ class LaunchVC: UIViewController {
     @IBAction func selectImageClicked(_ sender: UIButton) {
         PhotosManager.sharedManager.requestPermission {
             if PhotosManager.sharedManager.isAuthorized {
-                self.fetchImages()
+                self.cacheImages()
+                self.performSegue(withIdentifier: "imageSelectionSegue", sender: nil)
+//                self.fetchImages()
             }
             else {
                 let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default, handler: { (action) in
@@ -68,16 +70,9 @@ class LaunchVC: UIViewController {
         }
     }
     
-    func fetchImages() {
+    func cacheImages() {
         do {
-            SVProgressHUD.show(withStatus: "Fetching panoramas...")
-            try PhotosManager.sharedManager.fetchImages(completion: {[weak self] (images) in
-                SVProgressHUD.dismiss()
-                if self != nil {
-                    self!.images = images
-                    self!.performSegue(withIdentifier: "imageSelectionSegue", sender: nil)
-                }
-            })
+            try PhotosManager.sharedManager.cacheImages()
         }
         catch FetchError.collectionFetchError {
             self.displayAlert(title: "Panoramas not found", message: "Looks like you don't have any panoramas. Open the Camera app to click a panoramic image and come back here to edit it.", action: nil)
@@ -86,6 +81,25 @@ class LaunchVC: UIViewController {
             
         }
     }
+    
+//    func fetchImages() {
+//        do {
+//            SVProgressHUD.show(withStatus: "Fetching panoramas...")
+//            try PhotosManager.sharedManager.fetchImages(completion: {[weak self] (images) in
+//                SVProgressHUD.dismiss()
+//                if self != nil {
+//                    self!.images = images
+//                    self!.performSegue(withIdentifier: "imageSelectionSegue", sender: nil)
+//                }
+//            })
+//        }
+//        catch FetchError.collectionFetchError {
+//            self.displayAlert(title: "Panoramas not found", message: "Looks like you don't have any panoramas. Open the Camera app to click a panoramic image and come back here to edit it.", action: nil)
+//        }
+//        catch {
+//
+//        }
+//    }
 }
 
 extension LaunchVC: UIDynamicAnimatorDelegate {
@@ -102,11 +116,11 @@ extension LaunchVC: UIDynamicAnimatorDelegate {
 }
 
 extension LaunchVC {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let dVC = segue.destination as? UINavigationController, let imageSelectionVC = dVC.topViewController as? ImageSelectionVC else {
-            return
-        }
-        
-        imageSelectionVC.images = images
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let dVC = segue.destination as? UINavigationController, let imageSelectionVC = dVC.topViewController as? ImageSelectionVC else {
+//            return
+//        }
+//        
+//        imageSelectionVC.images = images
+//    }
 }

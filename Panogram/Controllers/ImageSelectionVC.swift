@@ -21,13 +21,17 @@ class ImageSelectionVC: UIViewController {
 extension ImageSelectionVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableView.separatorColor = UIColor.clear
-        return images.count
+        return PhotosManager.sharedManager.assets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "imagesSelectionCell", for: indexPath) as! ImageSelectionCell
         
-        cell.panoramaImageView.image = images[indexPath.row]
+        PhotosManager.sharedManager.fetchImage(at: indexPath.row, cached: true) { (row, image) in
+            if row == indexPath.row {
+                cell.panoramaImageView.image = image
+            }
+        }
         return cell
     }
 }
