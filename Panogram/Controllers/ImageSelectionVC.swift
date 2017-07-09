@@ -10,11 +10,9 @@ import UIKit
 
 class ImageSelectionVC: UIViewController {
     
-    var images = [UIImage]()
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Select a Panorama"
-        print(images)
     }
 }
 
