@@ -19,6 +19,8 @@
 		06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
 		06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECF81F036F0000D16E19 /* PanogramUITests.swift */; };
 		06CAED071F0375F900D16E19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAED061F0375F900D16E19 /* Extensions.swift */; };
+		06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */; };
+		06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B81F12D132006DD450 /* PhotoEditor.swift */; };
 		A99BECA6A22AADE59D9CEF7C /* Pods_PanogramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */; };
 		C1999C2610CA9A46977A40AC /* Pods_Panogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25507FF770037C29F6A820B3 /* Pods_Panogram.framework */; };
 		FC6FF99E6A1CC3BAF6EE8C80 /* Pods_PanogramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */; };
@@ -60,6 +62,8 @@
 		06CAECF81F036F0000D16E19 /* PanogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramUITests.swift; sourceTree = "<group>"; };
 		06CAECFA1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06CAED061F0375F900D16E19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditVC.swift; sourceTree = "<group>"; };
+		06F7A8B81F12D132006DD450 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
 		0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		25507FF770037C29F6A820B3 /* Pods_Panogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Panogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 			children = (
 				06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
 				06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */,
+				06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		06CAECD71F036EFF00D16E19 /* Panogram */ = {
 			isa = PBXGroup;
 			children = (
+				06F7A8B51F12CE82006DD450 /* Models */,
 				0674C4E61F04B6CC00B26DD4 /* Controllers */,
 				0674C4E81F04B6FA00B26DD4 /* Views */,
 				06CAECD81F036EFF00D16E19 /* AppDelegate.swift */,
@@ -150,7 +156,6 @@
 				06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */,
 				06CAECE41F036EFF00D16E19 /* Info.plist */,
 				06CAED061F0375F900D16E19 /* Extensions.swift */,
-				0654492C1F06A471009CB3AC /* PhotosManager.swift */,
 			);
 			path = Panogram;
 			sourceTree = "<group>";
@@ -171,6 +176,15 @@
 				06CAECFA1F036F0000D16E19 /* Info.plist */,
 			);
 			path = PanogramUITests;
+			sourceTree = "<group>";
+		};
+		06F7A8B51F12CE82006DD450 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0654492C1F06A471009CB3AC /* PhotosManager.swift */,
+				06F7A8B81F12D132006DD450 /* PhotoEditor.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		21986DBFAECFBE28F8AC7684 /* Frameworks */ = {
@@ -474,12 +488,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */,
 				06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */,
 				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
 				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
 				065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */,
 				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
+				06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,
 				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

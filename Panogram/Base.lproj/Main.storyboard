@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,6 +98,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="panoramaImageView" destination="S7T-hh-k9K" id="Boe-Pr-kHP"/>
+                                            <segue destination="Tvd-Y2-G0s" kind="show" id="yRk-yS-hWL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -117,6 +120,53 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCY-D5-VnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1605.5999999999999" y="35.532233883058474"/>
+        </scene>
+        <!--Image EditVC-->
+        <scene sceneID="8jA-p6-TR0">
+            <objects>
+                <viewController id="Tvd-Y2-G0s" customClass="ImageEditVC" customModule="Panogram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ilj-PF-LIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Rj-6h-Rar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gXC-SX-wzq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="9oI-C9-V7Q">
+                                <rect key="frame" x="16" y="72" width="343" height="114.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2lU-nx-kv8">
+                                        <rect key="frame" x="0.0" y="0.0" width="113.5" height="114.5"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="joI-aL-WCN">
+                                        <rect key="frame" x="114.5" y="0.0" width="114" height="114.5"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTc-Ww-O51">
+                                        <rect key="frame" x="229.5" y="0.0" width="113.5" height="114.5"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9oI-C9-V7Q" secondAttribute="height" multiplier="3:1" id="j5z-GI-19N"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9oI-C9-V7Q" firstAttribute="leading" secondItem="gXC-SX-wzq" secondAttribute="leadingMargin" id="HCv-pM-Qdx"/>
+                            <constraint firstItem="9oI-C9-V7Q" firstAttribute="trailing" secondItem="gXC-SX-wzq" secondAttribute="trailingMargin" id="OrS-Vr-Sjj"/>
+                            <constraint firstItem="9oI-C9-V7Q" firstAttribute="top" secondItem="Ilj-PF-LIp" secondAttribute="bottom" constant="8" id="jj0-JK-KUW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerImageView" destination="joI-aL-WCN" id="w74-BH-Ql7"/>
+                        <outlet property="leftImageView" destination="2lU-nx-kv8" id="OZe-bS-wSf"/>
+                        <outlet property="rightImageView" destination="KTc-Ww-O51" id="cOL-oK-FxF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kRg-dV-3pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2341.5999999999999" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JTc-dr-Hf2">
