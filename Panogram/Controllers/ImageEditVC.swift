@@ -24,7 +24,11 @@ class ImageEditVC: UIViewController {
         }
     }
     
-    var images = [UIImage]()
+    var images = [UIImage]() {
+        didSet {
+            PhotoEditor.sharedEditor.analyze(images: images)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

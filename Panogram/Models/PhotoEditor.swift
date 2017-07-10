@@ -40,4 +40,28 @@ class PhotoEditor {
         
         return [leftImage, centerImage, rightImage]
     }
+    
+    func analyze(images: [UIImage]) {
+        let googleNetPlaces = GoogLeNetPlaces()
+        var googleNetPlacesOutputs = [GoogLeNetPlacesOutput]()
+        
+        for image in images {
+            if let resizedImage = resize(image: image), let pixelBuffer = resizedImage.pixelBuffer() {
+                do {
+                    try googleNetPlacesOutputs.append(googleNetPlaces.prediction(sceneImage: pixelBuffer))
+                } catch {
+                    assert(false)
+                }
+            }
+        }
+    }
+    
+    func resize(image: UIImage) -> UIImage? {
+        UIGraphicsBeginImageContext(CGSize(width: 224, height: 224))
+        image.draw(in: CGRect(x: 0, y: 0, width: 224, height: 224))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
 }

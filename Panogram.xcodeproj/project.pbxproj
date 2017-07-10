@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0647AB171F133F650074AB4F /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0647AB161F133F640074AB4F /* GoogLeNetPlaces.mlmodel */; };
 		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
 		065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */; };
 		0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0647AB161F133F640074AB4F /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionCell.swift; sourceTree = "<group>"; };
 		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 		06F7A8B51F12CE82006DD450 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0647AB161F133F640074AB4F /* GoogLeNetPlaces.mlmodel */,
 				0654492C1F06A471009CB3AC /* PhotosManager.swift */,
 				06F7A8B81F12D132006DD450 /* PhotoEditor.swift */,
 			);
@@ -493,6 +496,7 @@
 				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
 				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
 				065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */,
+				0647AB171F133F650074AB4F /* GoogLeNetPlaces.mlmodel in Sources */,
 				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
 				06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,
