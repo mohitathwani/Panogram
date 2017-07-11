@@ -90,6 +90,9 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" hint="Panoramic Image">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstItem="S7T-hh-k9K" firstAttribute="leading" secondItem="fCk-0x-g2a" secondAttribute="leading" constant="8" id="BSQ-oa-YE2"/>
                                             <constraint firstItem="S7T-hh-k9K" firstAttribute="centerY" secondItem="fCk-0x-g2a" secondAttribute="centerY" id="C1y-7H-XuW"/>
@@ -138,12 +141,17 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2lU-nx-kv8">
                                         <rect key="frame" x="0.0" y="0.0" width="113.5" height="114.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Left Image View">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="joI-aL-WCN">
                                         <rect key="frame" x="114.5" y="0.0" width="114" height="114.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Center Image View"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTc-Ww-O51">
                                         <rect key="frame" x="229.5" y="0.0" width="113.5" height="114.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Right Image View"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>

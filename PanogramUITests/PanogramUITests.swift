@@ -29,7 +29,18 @@ class PanogramUITests: XCTestCase {
     }
     
     func testSelectImageTap() {
-        XCUIApplication().buttons["Select Image"].tap()
+        let app = XCUIApplication()
+        app.buttons["Select Image"].tap()
+        app.tables.children(matching: .cell).element.tap()
+        
+        let leftImageView = app.images["Left Image View"]
+        let centerImageView = app.images["Center Image View"]
+        let rightImageView = app.images["Right Image View"]
+        
+        XCTAssertTrue(leftImageView.exists)
+        XCTAssertTrue(centerImageView.exists)
+        XCTAssertTrue(rightImageView.exists)
+        
     }
     
 }
