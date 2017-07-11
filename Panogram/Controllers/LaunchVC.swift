@@ -11,7 +11,7 @@ import Pastel
 import SnapKit
 import SVProgressHUD
 
-class LaunchVC: UIViewController {
+class LaunchVC: UIViewController, ErrorPresenting {
     
     @IBOutlet weak var logoCenterYConstraint: NSLayoutConstraint!
     @IBOutlet weak var selectImageButton: UIButton!

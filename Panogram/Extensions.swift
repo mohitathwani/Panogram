@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ErrorPresenting {
+    func displayAlert(title: String, message:String, action: UIAlertAction?)
+}
+
 extension UIColor {
     convenience public init(red:UInt8, green:UInt8, blue:UInt8) {
         let r = CGFloat(Double(red)/255.0)
@@ -25,7 +29,7 @@ extension UIColor {
     }
 }
 
-extension UIViewController {
+extension ErrorPresenting where Self: UIViewController {
     func displayAlert(title: String, message:String, action: UIAlertAction?) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         

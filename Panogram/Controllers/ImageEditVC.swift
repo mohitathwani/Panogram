@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageEditVC: UIViewController {
+class ImageEditVC: UIViewController, ErrorPresenting {
     
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var centerImageView: UIImageView!
