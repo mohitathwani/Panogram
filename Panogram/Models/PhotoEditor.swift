@@ -41,55 +41,54 @@ class PhotoEditor {
         return [leftImage, centerImage, rightImage]
     }
     
-    //FIXME: Make this tread safe
-    func analyze(images: [UIImage]) -> Set<String> {
-        let googleNetPlaces = GoogLeNetPlaces()
-        var googleNetPlacesOutputs = [GoogLeNetPlacesOutput]()
+    func analyze(images: [UIImage], completion: @escaping (Set<String>) -> Void) {
         
-        var tags = Set<String>()
-        
-        for image in images {
-            if let resizedImage = resize(image: image), let pixelBuffer = resizedImage.pixelBuffer() {
-                do {
-                    try googleNetPlacesOutputs.append(googleNetPlaces.prediction(sceneImage: pixelBuffer))
-                } catch {
-                    assert(false)
+        DispatchQueue.global().async {
+            let googleNetPlaces = GoogLeNetPlaces()
+            var googleNetPlacesOutputs = [GoogLeNetPlacesOutput]()
+            
+            var tags = Set<String>()
+            
+            let byValue = {
+                (elem1:(key: String, val: Double), elem2:(key: String, val: Double))->Bool in
+                if elem1.val > elem2.val {
+                    return true
+                } else {
+                    return false
                 }
             }
-        }
-        
-        let byValue = {
-            (elem1:(key: String, val: Double), elem2:(key: String, val: Double))->Bool in
-            if elem1.val > elem2.val {
-                return true
-            } else {
-                return false
+            
+            for image in images {
+                if let resizedImage = self.resize(image: image), let pixelBuffer = resizedImage.pixelBuffer() {
+                    do {
+                        try googleNetPlacesOutputs.append(googleNetPlaces.prediction(sceneImage: pixelBuffer))
+                    } catch {
+                        assert(false)
+                    }
+                }
             }
-        }
-        
-        if googleNetPlacesOutputs.count > 0 {
-//            tags.insert(googleNetPlacesOutputs[0].sceneLabel)
-//            tags.insert(googleNetPlacesOutputs[1].sceneLabel)
-//            tags.insert(googleNetPlacesOutputs[2].sceneLabel)
             
-            var index = 0
-            
-            let leftSortedDictArray = googleNetPlacesOutputs[0].sceneLabelProbs.sorted(by: byValue)
-            
-            let centerSortedDictArray = googleNetPlacesOutputs[1].sceneLabelProbs.sorted(by: byValue)
-            
-            let rightSortedDictArray = googleNetPlacesOutputs[2].sceneLabelProbs.sorted(by: byValue)
-            
-            while tags.count < 9 {
-                tags.insert(leftSortedDictArray[index].key)
-                tags.insert(centerSortedDictArray[index].key)
-                tags.insert(rightSortedDictArray[index].key)
+            if googleNetPlacesOutputs.count > 0 {
+                var index = 0
                 
-                index += 1
+                let leftSortedDictArray = googleNetPlacesOutputs[0].sceneLabelProbs.sorted(by: byValue)
+                
+                let centerSortedDictArray = googleNetPlacesOutputs[1].sceneLabelProbs.sorted(by: byValue)
+                
+                let rightSortedDictArray = googleNetPlacesOutputs[2].sceneLabelProbs.sorted(by: byValue)
+                
+                while tags.count < 9 {
+                    tags.insert(leftSortedDictArray[index].key)
+                    tags.insert(centerSortedDictArray[index].key)
+                    tags.insert(rightSortedDictArray[index].key)
+                    
+                    index += 1
+                }
+            }
+            DispatchQueue.main.async {
+                completion(tags)
             }
         }
-        
-        return tags
     }
     
     func resize(image: UIImage) -> UIImage? {

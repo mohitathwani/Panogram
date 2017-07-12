@@ -31,7 +31,12 @@ class ImageEditVC: UIViewController, ErrorPresenting {
     
     var images = [UIImage]() {
         didSet {
-            tags = PhotoEditor.sharedEditor.analyze(images: images)
+            PhotoEditor.sharedEditor.analyze(images: images, completion: { [weak self] (tags) in
+                if let weakSelf = self {
+                    weakSelf.tags = tags
+                    weakSelf.tagView.appendTags(Array(tags))
+                }
+            })
         }
     }
     
@@ -41,7 +46,6 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         centerImageView.image = images[1]
         rightImageView.image = images[2]
         
-        tagView.appendTags(Array(tags))
         tagView.tagSpacing = 3.0
     }
 }
