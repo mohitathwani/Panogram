@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import ASJTagsView
 
 class ImageEditVC: UIViewController, ErrorPresenting {
     
+    
+    @IBOutlet weak var tagView: ASJTagsView!
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var centerImageView: UIImageView!
     @IBOutlet weak var leftImageView: UIImageView!
@@ -24,9 +27,11 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         }
     }
     
+    var tags = Set<String>()
+    
     var images = [UIImage]() {
         didSet {
-            PhotoEditor.sharedEditor.analyze(images: images)
+            tags = PhotoEditor.sharedEditor.analyze(images: images)
         }
     }
     
@@ -35,5 +40,8 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         leftImageView.image = images[0]
         centerImageView.image = images[1]
         rightImageView.image = images[2]
+        
+        tagView.appendTags(Array(tags))
+        tagView.tagSpacing = 3.0
     }
 }

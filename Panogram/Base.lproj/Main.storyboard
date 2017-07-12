@@ -158,18 +158,34 @@
                                     <constraint firstAttribute="width" secondItem="9oI-C9-V7Q" secondAttribute="height" multiplier="3:1" id="j5z-GI-19N"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add #tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCi-UP-hpb">
+                                <rect key="frame" x="16" y="194" width="87" height="26"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOW-0d-HmN" customClass="ASJTagsView">
+                                <rect key="frame" x="16" y="228" width="343" height="113.5"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yOW-0d-HmN" firstAttribute="trailing" secondItem="9oI-C9-V7Q" secondAttribute="trailing" id="7TZ-kM-rhs"/>
+                            <constraint firstItem="KCi-UP-hpb" firstAttribute="leading" secondItem="2lU-nx-kv8" secondAttribute="leading" id="Cpj-nA-7J4"/>
                             <constraint firstItem="9oI-C9-V7Q" firstAttribute="leading" secondItem="gXC-SX-wzq" secondAttribute="leadingMargin" id="HCv-pM-Qdx"/>
+                            <constraint firstItem="yOW-0d-HmN" firstAttribute="top" secondItem="KCi-UP-hpb" secondAttribute="bottom" constant="8" id="JI6-2v-Xei"/>
                             <constraint firstItem="9oI-C9-V7Q" firstAttribute="trailing" secondItem="gXC-SX-wzq" secondAttribute="trailingMargin" id="OrS-Vr-Sjj"/>
+                            <constraint firstItem="yOW-0d-HmN" firstAttribute="leading" secondItem="9oI-C9-V7Q" secondAttribute="leading" id="Rq6-om-D5t"/>
+                            <constraint firstItem="KCi-UP-hpb" firstAttribute="top" secondItem="2lU-nx-kv8" secondAttribute="bottom" constant="7.5" id="dKi-ry-JkC"/>
                             <constraint firstItem="9oI-C9-V7Q" firstAttribute="top" secondItem="Ilj-PF-LIp" secondAttribute="bottom" constant="8" id="jj0-JK-KUW"/>
+                            <constraint firstItem="yOW-0d-HmN" firstAttribute="height" secondItem="gXC-SX-wzq" secondAttribute="height" multiplier="0.17" id="ymI-Ec-F9v"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="centerImageView" destination="joI-aL-WCN" id="w74-BH-Ql7"/>
                         <outlet property="leftImageView" destination="2lU-nx-kv8" id="OZe-bS-wSf"/>
                         <outlet property="rightImageView" destination="KTc-Ww-O51" id="cOL-oK-FxF"/>
+                        <outlet property="tagView" destination="yOW-0d-HmN" id="q19-3u-8IV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRg-dV-3pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
