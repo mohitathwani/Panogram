@@ -35,6 +35,10 @@ class ImageEditVC: UIViewController, ErrorPresenting {
                 if let weakSelf = self {
                     weakSelf.tags = tags
                     weakSelf.tagView.appendTags(Array(tags))
+                    
+                    UIView.animate(withDuration: 1.5, animations: {
+                        weakSelf.tagView.alpha = 1.0
+                    })
                 }
             })
         }
@@ -46,6 +50,7 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         centerImageView.image = images[1]
         rightImageView.image = images[2]
         
+        tagView.alpha = 0
         tagView.tagSpacing = 3.0
     }
 }
