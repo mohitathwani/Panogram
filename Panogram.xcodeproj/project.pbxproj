@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE31F1705A80013FB5E /* GameKit.framework */; };
+		06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE51F1705B70013FB5E /* StoreKit.framework */; };
 		0647AB171F133F650074AB4F /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0647AB161F133F640074AB4F /* GoogLeNetPlaces.mlmodel */; };
 		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
 		065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */; };
@@ -45,12 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06073FE31F1705A80013FB5E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		06073FE51F1705B70013FB5E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0647AB161F133F640074AB4F /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../Downloads/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionCell.swift; sourceTree = "<group>"; };
 		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
 		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
-		06CAECD51F036EFF00D16E19 /* Panogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Panogram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECD51F036EFF00D16E19 /* Panogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Panogram.app; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		06CAECDD1F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,7 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */,
 				C1999C2610CA9A46977A40AC /* Pods_Panogram.framework in Frameworks */,
+				06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +199,8 @@
 		21986DBFAECFBE28F8AC7684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				06073FE51F1705B70013FB5E /* StoreKit.framework */,
+				06073FE31F1705A80013FB5E /* GameKit.framework */,
 				25507FF770037C29F6A820B3 /* Pods_Panogram.framework */,
 				63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */,
 				7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */,
@@ -290,6 +298,14 @@
 				TargetAttributes = {
 					06CAECD41F036EFF00D16E19 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					06CAECE81F036F0000D16E19 = {
 						CreatedOnToolsVersion = 9.0;
@@ -667,11 +683,12 @@
 			baseConfigurationReference = CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -682,11 +699,12 @@
 			baseConfigurationReference = 83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

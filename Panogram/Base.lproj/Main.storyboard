@@ -19,7 +19,7 @@
         <!--LaunchVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LaunchVC" customModule="Panogram" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LaunchVC" customModule="Panogram___Panoramas_for_Instagram" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -52,8 +52,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logoCenterYConstraint" destination="rOH-Qw-jIi" id="4WO-2f-pZ6"/>
-                        <outlet property="logoImageView" destination="VqS-hx-iqk" id="p9k-k4-3cF"/>
+                        <outlet property="logoCenterYConstraint" destination="rOH-Qw-jIi" id="0Ns-YK-fZq"/>
+                        <outlet property="logoImageView" destination="VqS-hx-iqk" id="zDG-Tw-oGD"/>
                         <outlet property="selectImageButton" destination="7jm-Y3-zuc" id="fE0-bC-0qZ"/>
                         <segue destination="AWA-fK-Zt9" kind="showDetail" identifier="imageSelectionSegue" action="showViewController:sender:" id="3yW-Ei-1tj"/>
                     </connections>
@@ -65,7 +65,7 @@
         <!--Image SelectionVC-->
         <scene sceneID="VEu-fO-tVe">
             <objects>
-                <viewController id="DR0-Gg-sKr" customClass="ImageSelectionVC" customModule="Panogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DR0-Gg-sKr" customClass="ImageSelectionVC" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PoG-ve-2V8"/>
                         <viewControllerLayoutGuide type="bottom" id="GlG-VF-dcW"/>
@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesSelectionCell" rowHeight="131" id="fCk-0x-g2a" customClass="ImageSelectionCell" customModule="Panogram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesSelectionCell" rowHeight="131" id="fCk-0x-g2a" customClass="ImageSelectionCell" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCk-0x-g2a" id="MAR-Pt-Ee5">
@@ -127,7 +127,7 @@
         <!--Image EditVC-->
         <scene sceneID="8jA-p6-TR0">
             <objects>
-                <viewController id="Tvd-Y2-G0s" customClass="ImageEditVC" customModule="Panogram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tvd-Y2-G0s" customClass="ImageEditVC" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ilj-PF-LIp"/>
                         <viewControllerLayoutGuide type="bottom" id="6Rj-6h-Rar"/>
