@@ -52,6 +52,7 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         
         tagView.alpha = 0
         tagView.tagSpacing = 3.0
+        tagView.tagColorTheme = .indigo
         
         addGradientToView()
     }

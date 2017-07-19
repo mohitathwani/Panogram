@@ -59,7 +59,7 @@ class PhotoEditor {
             }
             
             for image in images {
-                if let resizedImage = self.resize(image: image), let pixelBuffer = resizedImage.pixelBuffer() {
+                if let resizedImage = self.resize(image: image, width: 224, height: 224), let pixelBuffer = resizedImage.pixelBuffer() {
                     do {
                         try googleNetPlacesOutputs.append(googleNetPlaces.prediction(sceneImage: pixelBuffer))
                     } catch {
@@ -91,9 +91,9 @@ class PhotoEditor {
         }
     }
     
-    func resize(image: UIImage) -> UIImage? {
-        UIGraphicsBeginImageContext(CGSize(width: 224, height: 224))
-        image.draw(in: CGRect(x: 0, y: 0, width: 224, height: 224))
+    func resize(image: UIImage, width: Int, height: Int) -> UIImage? {
+        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
+        image.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
