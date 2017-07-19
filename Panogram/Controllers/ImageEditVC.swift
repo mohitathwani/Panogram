@@ -55,6 +55,8 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         tagView.tagColorTheme = .indigo
         
         addGradientToView()
+        
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func addGradientToView()  {
