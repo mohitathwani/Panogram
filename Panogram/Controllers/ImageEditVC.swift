@@ -52,5 +52,18 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         
         tagView.alpha = 0
         tagView.tagSpacing = 3.0
+        
+        addGradientToView()
+    }
+    
+    func addGradientToView()  {
+        let gradient = CAGradientLayer()
+        
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor(hex: 0x17ead9).cgColor, UIColor(hex: 0x6078ea).cgColor, UIColor(hex: 0x123456).cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 1.0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
+        
+        view.layer.insertSublayer(gradient, at: 0)
     }
 }
