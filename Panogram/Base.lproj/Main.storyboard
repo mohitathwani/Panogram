@@ -175,7 +175,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xq4-T2-GmP">
                                 <rect key="frame" x="20" y="404.33333333333326" width="374" height="257.66666666666674"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xiv-3i-8If">
                                     <size key="itemSize" width="209" height="139"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
