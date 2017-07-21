@@ -11,6 +11,7 @@ import ASJTagsView
 
 class ImageEditVC: UIViewController, ErrorPresenting {
     
+    var filterNames = ["Blur", "a", "b", "c", "d"]
     
     @IBOutlet weak var tagView: ASJTagsView!
     @IBOutlet weak var rightImageView: UIImageView!
@@ -68,5 +69,22 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         gradient.endPoint = CGPoint(x: 1.0, y: 0.0)
         
         view.layer.insertSublayer(gradient, at: 0)
+    }
+}
+extension ImageEditVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filterNames.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCell
+        
+        cell.filterNameLabel.text = filterNames[indexPath.row]
+        
+        cell.leftImageView.image = leftImageView.image
+        cell.centerImageView.image = centerImageView.image
+        cell.rightImageView.image = rightImageView.image
+        
+        return cell
     }
 }
