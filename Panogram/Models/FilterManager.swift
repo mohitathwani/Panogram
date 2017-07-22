@@ -39,7 +39,12 @@ class FilterManager {
                 assert(false)
             }
             
-            let cgImage = ciContext.createCGImage(outputImage, from: outputImage.extent)
+            var originalRect = outputImage.extent
+            originalRect.origin.x          += (originalRect.size.width  - image.size.width ) / 2;
+            originalRect.origin.y          += (originalRect.size.height - image.size.height) / 2;
+            originalRect.size               = image.size;
+            
+            let cgImage = ciContext.createCGImage(outputImage, from: originalRect)
             outputImages.append(UIImage(cgImage: cgImage!))
         }
         return outputImages
