@@ -232,6 +232,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="Tvd-Y2-G0s" id="Oj0-ku-gpb"/>
+                                    <outlet property="delegate" destination="Tvd-Y2-G0s" id="RVd-AV-tQ8"/>
                                 </connections>
                             </collectionView>
                         </subviews>
