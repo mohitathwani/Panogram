@@ -1,0 +1,21 @@
+PODS:
+  - ASJTagsView (1.1)
+  - Pastel (0.3.0)
+  - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.3)
+
+DEPENDENCIES:
+  - ASJTagsView
+  - Pastel
+  - SnapKit
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  ASJTagsView: fc7526f5d76fd2a07a011b232a03a6d2b0a9dad1
+  Pastel: 738740c84f2b15bbcd96ebe99c4e6c2f5dd42262
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: a5eaeff664a82dda89809c409ace40183ce91523
+
+PODFILE CHECKSUM: e1f4735f274a77fff4a5d41e60182f751716056e
+
+COCOAPODS: 1.4.0
