@@ -10,10 +10,14 @@ import UIKit
 
 class ImageSelectionVC: UIViewController, ErrorPresenting {
     
-    weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var centerImageView: UIImageView!
     @IBOutlet weak var leftImageView: UIImageView!
+    
+    var selectedIndexPath: IndexPath?
+    let tableViewDataSource = TableViewDataSource()
+    let tableViewDelegate = TableViewDelegate()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +27,11 @@ class ImageSelectionVC: UIViewController, ErrorPresenting {
     override func viewDidAppear(_ animated: Bool) {
         checkPermission()
 //        tableView.reloadData()
+        
+        self.tableView.dataSource = tableViewDataSource
+        self.tableView.delegate = tableViewDelegate
+        tableViewDelegate.delegate = self
+        self.tableView.separatorColor = UIColor.clear
     }
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,33 +76,10 @@ extension ImageSelectionVC {
     }
 }
 
-extension ImageSelectionVC: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.tableView = tableView
-        tableView.separatorColor = UIColor.clear
-        return PhotosManager.sharedManager.assets.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "imagesSelectionCell", for: indexPath) as! ImageSelectionCell
-        
-        PhotosManager.sharedManager.fetchImage(at: indexPath.row, cached: true) { (row, image) in
-            if row == indexPath.row {
-                cell.panoramaImageView.image = image
-            }
-        }
-        return cell
-    }
-}
-
-extension ImageSelectionVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        
+extension ImageSelectionVC: CellSelected {
+    func splitImage(_ image: UIImage) {
         do {
-            guard let selectedCell = tableView.cellForRow(at: indexPath) as? ImageSelectionCell, let panoramaImage = selectedCell.panoramaImageView.image else {return}
-            
-            let images = try PhotoEditor.sharedEditor.cut(panoramaImage: panoramaImage)
+            let images = try PhotoEditor.sharedEditor.cut(panoramaImage: image)
             leftImageView.image = images[0]
             centerImageView.image = images[1]
             rightImageView.image = images[2]
@@ -101,4 +87,12 @@ extension ImageSelectionVC: UITableViewDelegate {
             displayAlert(title: "Image Split Error", message: "There seems to be an issue trying to split the image. Please try with another image.", action: nil)
         } catch {}
     }
+    
+    
+    
+    
+}
+
+extension ImageSelectionVC: UITableViewDelegate {
+    
 }

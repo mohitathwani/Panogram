@@ -88,7 +88,14 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S7T-hh-k9K">
                                                     <rect key="frame" x="8" y="13" width="398" height="105"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panorama-icon" translatesAutoresizingMaskIntoConstraints="NO" id="7oy-8J-zfN">
+                                                    <rect key="frame" x="368" y="95" width="30" height="15"/>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7oy-8J-zfN" firstAttribute="bottom" secondItem="S7T-hh-k9K" secondAttribute="bottom" constant="-8" id="TUj-FW-i1y"/>
+                                                <constraint firstItem="7oy-8J-zfN" firstAttribute="trailing" secondItem="S7T-hh-k9K" secondAttribute="trailing" constant="-8" id="XdH-JQ-3O5"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" hint="Panoramic Image">
                                             <bool key="isElement" value="YES"/>
@@ -101,13 +108,10 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="panoramaImageView" destination="S7T-hh-k9K" id="Boe-Pr-kHP"/>
+                                            <outlet property="selectedImageView" destination="7oy-8J-zfN" id="gXQ-YW-Qth"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="DR0-Gg-sKr" id="C6C-ja-wGG"/>
-                                    <outlet property="delegate" destination="DR0-Gg-sKr" id="FvJ-HO-gYU"/>
-                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kAo-NK-EAt">
                                 <rect key="frame" x="0.0" y="64" width="414" height="165"/>
@@ -141,6 +145,7 @@
                         <outlet property="centerImageView" destination="kEY-p2-XWm" id="92B-fJ-B9S"/>
                         <outlet property="leftImageView" destination="HCc-nm-vK6" id="aSL-oi-YC8"/>
                         <outlet property="rightImageView" destination="bOR-8i-3DF" id="gD2-qg-pUM"/>
+                        <outlet property="tableView" destination="xQ5-7d-aQ2" id="0LD-u7-XL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YCY-D5-VnQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -313,5 +318,6 @@
         <image name="default-1" width="200" height="200"/>
         <image name="default-2" width="200" height="200"/>
         <image name="default-3" width="200" height="200"/>
+        <image name="panorama-icon" width="30" height="15"/>
     </resources>
 </document>
