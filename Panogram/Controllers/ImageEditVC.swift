@@ -57,7 +57,7 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         
         addGradientToView()
         
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
     }
     
     func addGradientToView()  {

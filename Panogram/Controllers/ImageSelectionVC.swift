@@ -34,13 +34,17 @@ class ImageSelectionVC: UIViewController, ErrorPresenting {
         self.tableView.separatorColor = UIColor.clear
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let selectedIndexPath = tableView.indexPathForSelectedRow, let dVC = segue.destination as? ImageEditVC, let selectedCell = tableView.cellForRow(at: selectedIndexPath) as? ImageSelectionCell else {
-//            return
-//        }
-//
-//        dVC.panoramaImage = selectedCell.panoramaImageView.image
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let selectedIndexPath = (tableView.dataSource as? TableViewDataSource)?.selectedIndexPath, let dVC = segue.destination as? ImageEditVC, let selectedCell = tableView.cellForRow(at: selectedIndexPath) as? ImageSelectionCell else {
+            return
+        }
+
+        dVC.panoramaImage = selectedCell.panoramaImageView.image
+    }
+    
+    @IBAction func nextTapped(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "imageEditSegue", sender: nil)
+    }
 }
 
 extension ImageSelectionVC {
