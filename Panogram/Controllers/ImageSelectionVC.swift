@@ -21,7 +21,7 @@ class ImageSelectionVC: UIViewController, ErrorPresenting {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Select a Panorama"
+        title = "Panoramas"
     }
     
     override func viewDidAppear(_ animated: Bool) {

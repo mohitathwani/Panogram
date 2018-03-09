@@ -26,7 +26,7 @@ class FilterManager {
     }
     
     private func applyBlur(toImages images:[UIImage]) -> [UIImage] {
-        guard let blurFilter = CIFilter(name: "CIGaussianBlur") else {assert(false)}
+        guard let blurFilter = CIFilter(name: "CIGaussianBlur") else {assert(false); return []}
         
         var outputImages = [UIImage]()
         
@@ -36,7 +36,7 @@ class FilterManager {
 //            blurFilter.setValue(5,forKey: kCIInputRadiusKey)
             
             guard let outputImage = blurFilter.outputImage else {
-                assert(false)
+                assert(false); return []
             }
             
             var originalRect = outputImage.extent

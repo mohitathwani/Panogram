@@ -140,7 +140,11 @@
                             <constraint firstItem="kAo-NK-EAt" firstAttribute="width" secondItem="xQ5-7d-aQ2" secondAttribute="width" id="yIB-r3-AeO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="567-KP-Umf"/>
+                    <navigationItem key="navigationItem" id="567-KP-Umf">
+                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="krt-XK-Jtj">
+                            <color key="tintColor" red="0.2196078431372549" green="0.59215686274509804" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="centerImageView" destination="kEY-p2-XWm" id="92B-fJ-B9S"/>
                         <outlet property="leftImageView" destination="HCc-nm-vK6" id="aSL-oi-YC8"/>

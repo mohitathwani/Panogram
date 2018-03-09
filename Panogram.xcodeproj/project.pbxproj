@@ -63,7 +63,7 @@
 		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
 		06A245481F2186CF00F5E748 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
-		06CAECD51F036EFF00D16E19 /* Panogram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Panogram.app; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		06CAECDD1F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 		06CAECD61F036EFF00D16E19 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				06CAECD51F036EFF00D16E19 /* Panogram.app */,
+				06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */,
 				06CAECE91F036F0000D16E19 /* PanogramTests.xctest */,
 				06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */,
 			);
@@ -280,7 +280,7 @@
 			);
 			name = Panogram;
 			productName = Panogram;
-			productReference = 06CAECD51F036EFF00D16E19 /* Panogram.app */;
+			productReference = 06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */;
 			productType = "com.apple.product-type.application";
 		};
 		06CAECE81F036F0000D16E19 /* PanogramTests */ = {
@@ -746,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -753,6 +754,7 @@
 				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -762,6 +764,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -769,6 +772,7 @@
 				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
