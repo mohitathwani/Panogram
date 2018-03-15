@@ -10,6 +10,8 @@
 		06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE31F1705A80013FB5E /* GameKit.framework */; };
 		06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE51F1705B70013FB5E /* StoreKit.framework */; };
 		063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E4C841F22C65700F2D1AE /* FilterManager.swift */; };
+		06425396205A147200FDCA5B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425395205A147200FDCA5B /* CarouselView.swift */; };
+		06425398205A148B00FDCA5B /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06425397205A148B00FDCA5B /* CarouselView.xib */; };
 		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
 		065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19652050FEC300AC1236 /* TableViewDataSource.swift */; };
 		065B19692050FFC900AC1236 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19682050FFC900AC1236 /* Protocols.swift */; };
@@ -55,6 +57,8 @@
 		06073FE31F1705A80013FB5E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		06073FE51F1705B70013FB5E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		063E4C841F22C65700F2D1AE /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		06425395205A147200FDCA5B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		06425397205A148B00FDCA5B /* CarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
 		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		065B19652050FEC300AC1236 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		065B19682050FFC900AC1236 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
 				065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */,
 				06A245481F2186CF00F5E748 /* FilterCell.swift */,
+				06425395205A147200FDCA5B /* CarouselView.swift */,
+				06425397205A148B00FDCA5B /* CarouselView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			files = (
 				06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */,
 				06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */,
+				06425398205A148B00FDCA5B /* CarouselView.xib in Resources */,
 				06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +577,7 @@
 				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
 				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
 				065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */,
+				06425396205A147200FDCA5B /* CarouselView.swift in Sources */,
 				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
 				06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,

@@ -11,6 +11,7 @@ import ASJTagsView
 
 class ImageEditVC: UIViewController, ErrorPresenting {
     
+    @IBOutlet weak var carouselView: CarouselView!
     var filters: [Filter] = [.blur]
     
     @IBOutlet weak var tagView: ASJTagsView!
@@ -47,6 +48,8 @@ class ImageEditVC: UIViewController, ErrorPresenting {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        carouselView.images = images
+        
         leftImageView.image = images[0]
         centerImageView.image = images[1]
         rightImageView.image = images[2]
@@ -55,7 +58,7 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         tagView.tagSpacing = 3.0
         tagView.tagColorTheme = .indigo
         
-        addGradientToView()
+//        addGradientToView()
         
 //        self.navigationController?.navigationBar.isHidden = true
     }
