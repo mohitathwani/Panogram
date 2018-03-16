@@ -48,7 +48,7 @@ class ImageEditVC: UIViewController, ErrorPresenting {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        carouselView.images = images
+//        carouselView.images = images
         
         leftImageView.image = images[0]
         centerImageView.image = images[1]
