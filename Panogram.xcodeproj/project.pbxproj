@@ -19,6 +19,7 @@
 		065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */; };
 		065E59D0205B78B600A56A2A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065E59CE205B78B600A56A2A /* CarouselCell.swift */; };
 		065E59D1205B78B600A56A2A /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065E59CF205B78B600A56A2A /* CarouselCell.xib */; };
+		065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */; };
 		0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
 		06A245491F2186D000F5E748 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A245481F2186CF00F5E748 /* FilterCell.swift */; };
 		06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */; };
@@ -29,7 +30,6 @@
 		06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
 		06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECF81F036F0000D16E19 /* PanogramUITests.swift */; };
 		06CAED071F0375F900D16E19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAED061F0375F900D16E19 /* Extensions.swift */; };
-		06E1922820353D1300FCA2AD /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 06E1922720353D1300FCA2AD /* GoogLeNetPlaces.mlmodel */; };
 		06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E1922920354E2600FCA2AD /* Assets.xcassets */; };
 		06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */; };
 		06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B81F12D132006DD450 /* PhotoEditor.swift */; };
@@ -68,6 +68,7 @@
 		065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionCell.swift; sourceTree = "<group>"; };
 		065E59CE205B78B600A56A2A /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		065E59CF205B78B600A56A2A /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
+		065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
 		06A245481F2186CF00F5E748 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		06CAECF81F036F0000D16E19 /* PanogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramUITests.swift; sourceTree = "<group>"; };
 		06CAECFA1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06CAED061F0375F900D16E19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		06E1922720353D1300FCA2AD /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = GoogLeNetPlaces.mlmodel; path = ../../../../.Trash/GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
 		06E1922920354E2600FCA2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditVC.swift; sourceTree = "<group>"; };
 		06F7A8B81F12D132006DD450 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
@@ -255,7 +255,7 @@
 		06F7A8B51F12CE82006DD450 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				06E1922720353D1300FCA2AD /* GoogLeNetPlaces.mlmodel */,
+				065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */,
 				0654492C1F06A471009CB3AC /* PhotosManager.swift */,
 				06F7A8B81F12D132006DD450 /* PhotoEditor.swift */,
 				063E4C841F22C65700F2D1AE /* FilterManager.swift */,
@@ -605,12 +605,12 @@
 				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
 				06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,
+				065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */,
 				065B19692050FFC900AC1236 /* Protocols.swift in Sources */,
 				065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */,
 				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
 				065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */,
 				063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */,
-				06E1922820353D1300FCA2AD /* GoogLeNetPlaces.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,7 +778,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -796,7 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

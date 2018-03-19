@@ -58,9 +58,16 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         tagView.tagSpacing = 3.0
         tagView.tagColorTheme = .indigo
         
+        carouselView.images = images
+        
 //        addGradientToView()
         
 //        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        carouselView.scrollToCenter()
     }
     
     func addGradientToView()  {
