@@ -11,6 +11,8 @@ import ASJTagsView
 
 class ImageEditVC: UIViewController, ErrorPresenting {
     
+    @IBOutlet weak var bottomContainerView: StackContainerView!
+    @IBOutlet weak var topContainerView: StackContainerView!
     @IBOutlet weak var carouselView: CarouselView!
     var filters: [Filter] = [.blur]
     
@@ -50,15 +52,20 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         super.viewDidLoad()
 //        carouselView.images = images
         
-        leftImageView.image = images[0]
-        centerImageView.image = images[1]
-        rightImageView.image = images[2]
+//        leftImageView.image = images[0]
+//        centerImageView.image = images[1]
+//        rightImageView.image = images[2]
         
         tagView.alpha = 0
         tagView.tagSpacing = 3.0
         tagView.tagColorTheme = .indigo
         
         carouselView.images = images
+        
+        topContainerView.height = 4
+        bottomContainerView.height = 8
+        
+//        edgesForExtendedLayout = []
         
 //        addGradientToView()
         
@@ -91,9 +98,9 @@ extension ImageEditVC: UICollectionViewDataSource {
         
         cell.filterNameLabel.text = filters[indexPath.row].rawValue
         
-        cell.leftImageView.image = leftImageView.image
-        cell.centerImageView.image = centerImageView.image
-        cell.rightImageView.image = rightImageView.image
+//        cell.leftImageView.image = leftImageView.image
+//        cell.centerImageView.image = centerImageView.image
+//        cell.rightImageView.image = rightImageView.image
         
         return cell
     }

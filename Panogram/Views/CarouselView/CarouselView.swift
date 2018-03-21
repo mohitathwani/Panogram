@@ -42,12 +42,16 @@ class CarouselView: UIView {
         }
         
         collectionViewLayout.minimumLineSpacing = 0
-        configureCollectionViewLayoutItemSize()
+//        configureCollectionViewLayoutItemSize()
     }
     
-    lazy var collectionViewWidth = collectionViewLayout.collectionView!.frame.size.width
+    var collectionViewWidth: CGFloat {
+        return collectionViewLayout.collectionView!.frame.size.width
+    }
     
-    lazy var collectionViewHeight = collectionViewLayout.collectionView!.frame.size.height
+    var collectionViewHeight: CGFloat {
+        return collectionViewLayout.collectionView!.frame.size.height
+    }
     
     private func configureCollectionViewLayoutItemSize() {
         let inset: CGFloat = calculateSectionInset() // This inset calculation is some magic so the next and the previous cells will peek from the sides. Don't worry about it
@@ -58,6 +62,10 @@ class CarouselView: UIView {
         collectionViewLayout.itemSize = CGSize(width: collectionViewWidth - inset * 2, height: collectionViewHeight)
         
         collectionViewLayout.collectionView!.reloadData()
+    }
+    
+    override func layoutSubviews() {
+        configureCollectionViewLayoutItemSize()
     }
     
     private func calculateSectionInset() -> CGFloat {
