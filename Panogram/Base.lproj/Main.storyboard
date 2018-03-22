@@ -77,10 +77,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="131" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQ5-7d-aQ2">
-                                <rect key="frame" x="0.0" y="168" width="375" height="499"/>
+                                <rect key="frame" x="0.0" y="239" width="375" height="428"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesSelectionCell" rowHeight="131" id="fCk-0x-g2a" customClass="ImageSelectionCell" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imagesSelectionCell" rowHeight="131" id="fCk-0x-g2a" customClass="ImageSelectionCell" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCk-0x-g2a" id="MAR-Pt-Ee5">
@@ -116,29 +116,29 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kAo-NK-EAt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="96"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="167"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-1" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-nm-vK6">
-                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="96"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="123.5" height="167"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-2" translatesAutoresizingMaskIntoConstraints="NO" id="kEY-p2-XWm">
-                                        <rect key="frame" x="125.5" y="0.0" width="124" height="96"/>
+                                        <rect key="frame" x="125.5" y="0.0" width="124" height="167"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-3" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-8i-3DF">
-                                        <rect key="frame" x="251.5" y="0.0" width="123.5" height="96"/>
+                                        <rect key="frame" x="251.5" y="0.0" width="123.5" height="167"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="kAo-NK-EAt" secondAttribute="bottom" constant="507" id="34j-7R-RF9"/>
                             <constraint firstAttribute="trailing" secondItem="xQ5-7d-aQ2" secondAttribute="trailing" id="3Gw-Qn-20X"/>
                             <constraint firstItem="xQ5-7d-aQ2" firstAttribute="top" secondItem="kAo-NK-EAt" secondAttribute="bottom" constant="8" id="A2Z-hR-koo"/>
                             <constraint firstItem="GlG-VF-dcW" firstAttribute="top" secondItem="xQ5-7d-aQ2" secondAttribute="bottom" id="NsX-8D-Isu"/>
                             <constraint firstItem="kAo-NK-EAt" firstAttribute="top" secondItem="PoG-ve-2V8" secondAttribute="bottom" id="b7c-KL-xgp"/>
                             <constraint firstItem="xQ5-7d-aQ2" firstAttribute="leading" secondItem="6m2-5y-Awi" secondAttribute="leading" id="bUx-iy-lit"/>
                             <constraint firstItem="kAo-NK-EAt" firstAttribute="leading" secondItem="xQ5-7d-aQ2" secondAttribute="leading" id="tWP-z1-47J"/>
+                            <constraint firstItem="kAo-NK-EAt" firstAttribute="height" secondItem="6m2-5y-Awi" secondAttribute="height" multiplier="0.25" id="xI7-k7-ajw"/>
                             <constraint firstItem="kAo-NK-EAt" firstAttribute="width" secondItem="xQ5-7d-aQ2" secondAttribute="width" id="yIB-r3-AeO"/>
                         </constraints>
                     </view>

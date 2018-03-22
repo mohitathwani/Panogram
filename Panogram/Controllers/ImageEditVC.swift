@@ -62,8 +62,8 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         
         carouselView.images = images
         
-        topContainerView.height = 4
-        bottomContainerView.height = 8
+        topContainerView.height = 3
+        bottomContainerView.height = 4
         
 //        edgesForExtendedLayout = []
         

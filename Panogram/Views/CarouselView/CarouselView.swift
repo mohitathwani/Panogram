@@ -69,9 +69,7 @@ class CarouselView: UIView {
     }
     
     private func calculateSectionInset() -> CGFloat {
-        
-        let inset = (collectionViewWidth) / 9
-        return inset
+        return 100
     }
     
     private func indexOfMajorCell() -> Int {
