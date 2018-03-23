@@ -12,6 +12,7 @@
 		063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E4C841F22C65700F2D1AE /* FilterManager.swift */; };
 		06425396205A147200FDCA5B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425395205A147200FDCA5B /* CarouselView.swift */; };
 		06425398205A148B00FDCA5B /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06425397205A148B00FDCA5B /* CarouselView.xib */; };
+		064DA00E2064BF440002831C /* SepiaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DA00D2064BF440002831C /* SepiaFilter.swift */; };
 		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
 		065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19652050FEC300AC1236 /* TableViewDataSource.swift */; };
 		065B19692050FFC900AC1236 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19682050FFC900AC1236 /* Protocols.swift */; };
@@ -62,6 +63,7 @@
 		063E4C841F22C65700F2D1AE /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		06425395205A147200FDCA5B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		06425397205A148B00FDCA5B /* CarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
+		064DA00D2064BF440002831C /* SepiaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepiaFilter.swift; sourceTree = "<group>"; };
 		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		065B19652050FEC300AC1236 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		065B19682050FFC900AC1236 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -131,6 +133,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064DA00C2064BF310002831C /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				064DA00D2064BF440002831C /* SepiaFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		065B19642050FE9D00AC1236 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 		06CAECD71F036EFF00D16E19 /* Panogram */ = {
 			isa = PBXGroup;
 			children = (
+				064DA00C2064BF310002831C /* Filters */,
 				065B196A205101F100AC1236 /* Delegates */,
 				065B19672050FFBB00AC1236 /* Protocols */,
 				065B19642050FE9D00AC1236 /* Data Source */,
@@ -608,6 +619,7 @@
 				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
 				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
 				06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,
+				064DA00E2064BF440002831C /* SepiaFilter.swift in Sources */,
 				065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */,
 				065B19692050FFC900AC1236 /* Protocols.swift in Sources */,
 				065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */,
@@ -782,7 +794,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -800,7 +812,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

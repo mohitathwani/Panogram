@@ -14,12 +14,9 @@ class ImageEditVC: UIViewController, ErrorPresenting {
     @IBOutlet weak var bottomContainerView: StackContainerView!
     @IBOutlet weak var topContainerView: StackContainerView!
     @IBOutlet weak var carouselView: CarouselView!
-    var filters: [Filter] = [.blur]
+    var filters: [Filter] = Filter.allValues
     
     @IBOutlet weak var tagView: ASJTagsView!
-    @IBOutlet weak var rightImageView: UIImageView!
-    @IBOutlet weak var centerImageView: UIImageView!
-    @IBOutlet weak var leftImageView: UIImageView!
     
     var panoramaImage: UIImage! {
         didSet {
@@ -50,11 +47,6 @@ class ImageEditVC: UIViewController, ErrorPresenting {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        carouselView.images = images
-        
-//        leftImageView.image = images[0]
-//        centerImageView.image = images[1]
-//        rightImageView.image = images[2]
         
         tagView.alpha = 0
         tagView.tagSpacing = 3.0
@@ -64,12 +56,6 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         
         topContainerView.height = 3
         bottomContainerView.height = 4
-        
-//        edgesForExtendedLayout = []
-        
-//        addGradientToView()
-        
-//        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,11 +83,7 @@ extension ImageEditVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "filterCell", for: indexPath) as! FilterCell
         
         cell.filterNameLabel.text = filters[indexPath.row].rawValue
-        
-//        cell.leftImageView.image = leftImageView.image
-//        cell.centerImageView.image = centerImageView.image
-//        cell.rightImageView.image = rightImageView.image
-        
+
         return cell
     }
 }
@@ -109,12 +91,7 @@ extension ImageEditVC: UICollectionViewDataSource {
 extension ImageEditVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let images = [leftImageView.image!, centerImageView.image!, rightImageView.image!]
+//        let outputImages = FilterManager.sharedManager.apply(filter: filters[indexPath.row], toImages: images)
         
-        let outputImages = FilterManager.sharedManager.apply(filter: filters[indexPath.row], toImages: images)
-        
-        leftImageView.image = outputImages[0]
-        centerImageView.image = outputImages[1]
-        rightImageView.image = outputImages[2]
     }
 }

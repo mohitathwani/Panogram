@@ -9,8 +9,33 @@
 import UIKit
 import CoreImage
 
-enum Filter: String {
+protocol EnumCollection: Hashable {
+    static func cases() -> AnySequence<Self>
+    static var allValues :[Self] {get}
+}
+
+extension EnumCollection {
+    static func cases() -> AnySequence<Self> {
+        return AnySequence { () -> AnyIterator<Self> in
+            var raw = 0
+            return AnyIterator {
+                let current: Self = withUnsafePointer(to: &raw) { $0.withMemoryRebound(to: self, capacity: 1) { $0.pointee } }
+                guard current.hashValue == raw else {
+                    return nil
+                }
+                raw += 1
+                return current
+            }
+        }
+    }
+    
+    static var allValues: [Self] {
+        return Array(self.cases())
+    }
+}
+enum Filter: String, EnumCollection {
     case blur = "Blur"
+    case sepia = "Sepia"
 }
 
 class FilterManager {
@@ -22,7 +47,16 @@ class FilterManager {
         switch filter {
         case .blur:
             return applyBlur(toImages: images)
+            
+        case .sepia:
+            return applySepia(toImages: images)
         }
+    }
+    
+    private func applySepia(toImages images:[UIImage]) -> [UIImage] {
+        let sepiaFilter = SepiaFilter()
+        
+        return [UIImage]()
     }
     
     private func applyBlur(toImages images:[UIImage]) -> [UIImage] {

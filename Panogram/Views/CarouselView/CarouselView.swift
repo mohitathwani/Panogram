@@ -35,14 +35,12 @@ class CarouselView: UIView {
         let carouselCellNib = UINib(nibName: "CarouselCell", bundle: nil)
         
         collectionView.register(carouselCellNib, forCellWithReuseIdentifier: "CarouselCell")
-//        collectionView.backgroundColor = UIColor.blue
         
         contentView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
         
         collectionViewLayout.minimumLineSpacing = 0
-//        configureCollectionViewLayoutItemSize()
     }
     
     var collectionViewWidth: CGFloat {
@@ -54,10 +52,9 @@ class CarouselView: UIView {
     }
     
     private func configureCollectionViewLayoutItemSize() {
-        let inset: CGFloat = calculateSectionInset() // This inset calculation is some magic so the next and the previous cells will peek from the sides. Don't worry about it
+        let inset: CGFloat = calculateSectionInset()
+        
         collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
-        
-        
         
         collectionViewLayout.itemSize = CGSize(width: collectionViewWidth - inset * 2, height: collectionViewHeight)
         
@@ -95,19 +92,6 @@ extension CarouselView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCell", for: indexPath) as! CarouselCell
-//        cell.backgroundColor = UIColor.brown
-//        if(indexPath.row == 0) {
-//
-//            cell.imageView.backgroundColor = UIColor.red
-//        }
-//
-//        if(indexPath.row == 1) {
-//            cell.imageView.backgroundColor = UIColor.green
-//        }
-//
-//        if(indexPath.row == 2) {
-//            cell.imageView.backgroundColor = UIColor.darkGray
-//        }
         
         cell.imageView.image = images[indexPath.row]
         
