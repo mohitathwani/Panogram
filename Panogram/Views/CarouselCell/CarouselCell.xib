@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,15 +23,22 @@
                         <rect key="frame" x="11" y="0.0" width="420" height="244"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
+                    <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="udj-NS-irt">
+                        <rect key="frame" x="11" y="0.0" width="420" height="244"/>
+                    </glkView>
                 </subviews>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Pcn-b7-dFg" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="N2I-3W-CEt"/>
+                <constraint firstItem="udj-NS-irt" firstAttribute="top" secondItem="Pcn-b7-dFg" secondAttribute="top" id="S6k-hv-j0S"/>
+                <constraint firstItem="udj-NS-irt" firstAttribute="trailing" secondItem="Pcn-b7-dFg" secondAttribute="trailing" id="Zay-bG-pQV"/>
                 <constraint firstItem="Pcn-b7-dFg" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.95" id="aiw-Px-R3Y"/>
+                <constraint firstItem="udj-NS-irt" firstAttribute="bottom" secondItem="Pcn-b7-dFg" secondAttribute="bottom" id="kOL-yg-LGG"/>
                 <constraint firstAttribute="bottom" secondItem="Pcn-b7-dFg" secondAttribute="bottom" id="s6q-vw-B3V"/>
                 <constraint firstItem="Pcn-b7-dFg" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="sgC-xA-qvA"/>
                 <constraint firstItem="Pcn-b7-dFg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tpf-Lj-p1h"/>
+                <constraint firstItem="udj-NS-irt" firstAttribute="leading" secondItem="Pcn-b7-dFg" secondAttribute="leading" id="xpJ-v1-jB2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="442" height="244"/>
