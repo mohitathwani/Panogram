@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import GLKit
 
-class CarouselCell: UICollectionViewCell {
+class CarouselCell: UICollectionViewCell, GLKViewDelegate {
 
+    @IBOutlet weak var glkView: GLKView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    var eaglContext: EAGLContext!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func glkView(_ view: GLKView, drawIn rect: CGRect) {
+        
     }
 
 }

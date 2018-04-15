@@ -43,6 +43,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="442" height="244"/>
             <connections>
+                <outlet property="glkView" destination="udj-NS-irt" id="WBA-AU-R8x"/>
                 <outlet property="imageView" destination="Pcn-b7-dFg" id="KmM-D2-sI8"/>
             </connections>
             <point key="canvasLocation" x="-13" y="47"/>
