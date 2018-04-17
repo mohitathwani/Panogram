@@ -53,6 +53,8 @@ class ImageEditVC: UIViewController, ErrorPresenting {
         tagView.tagColorTheme = .indigo
         
         carouselView.images = images
+        carouselView.eaglContext = FilterManager.sharedManager.eaglContext
+        carouselView.ciContext = FilterManager.sharedManager.ciContext
         
         topContainerView.height = 3
         bottomContainerView.height = 4
@@ -91,7 +93,9 @@ extension ImageEditVC: UICollectionViewDataSource {
 extension ImageEditVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-//        let outputImages = FilterManager.sharedManager.apply(filter: filters[indexPath.row], toImages: images)
+        let filteredImages = FilterManager.sharedManager.apply(filter: filters[indexPath.row], toImages: images)
+        
+        carouselView.filteredImages = filteredImages
         
     }
 }

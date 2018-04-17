@@ -23,7 +23,7 @@
                         <rect key="frame" x="11" y="0.0" width="420" height="244"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
-                    <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="udj-NS-irt">
+                    <glkView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="udj-NS-irt">
                         <rect key="frame" x="11" y="0.0" width="420" height="244"/>
                     </glkView>
                 </subviews>

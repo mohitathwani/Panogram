@@ -40,23 +40,33 @@ enum Filter: String, EnumCollection {
 
 class FilterManager {
     static let sharedManager = FilterManager()
-    private let ciContext = CIContext()
-    private init() {}
     
-    func apply(filter: Filter, toImages images:[UIImage]) -> [UIImage] {
+    private(set) var eaglContext: EAGLContext!
+    private(set) var ciContext: CIContext!
+    
+    private init() {
+        eaglContext = EAGLContext(api: EAGLRenderingAPI.openGLES2)
+        ciContext = CIContext(eaglContext: eaglContext, options: [kCIContextWorkingColorSpace: NSNull()])
+    }
+    
+    func apply(filter: Filter, toImages images:[UIImage]) -> [CIImage] {
         switch filter {
         case .blur:
-            return applyBlur(toImages: images)
+            fatalError("Not implemented yet")
+//            return applyBlur(toImages: images)
             
         case .sepia:
             return applySepia(toImages: images)
         }
     }
     
-    private func applySepia(toImages images:[UIImage]) -> [UIImage] {
+    private func applySepia(toImages images:[UIImage]) -> [CIImage] {
         let sepiaFilter = SepiaFilter()
         
-        return [UIImage]()
+        var filteredCIImages = images.map { (image) -> CIImage in
+            return sepiaFilter.applyTo(image: image)
+        }
+        return filteredCIImages
     }
     
     private func applyBlur(toImages images:[UIImage]) -> [UIImage] {

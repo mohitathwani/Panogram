@@ -14,7 +14,15 @@ class CarouselView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
     
+    var eaglContext: EAGLContext!
+    var ciContext: CIContext!
+    
     lazy var images = [UIImage]()
+    var filteredImages: [CIImage]! {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     
     private var indexOfCellBeforeDragging = 0
     
@@ -94,6 +102,12 @@ extension CarouselView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCell", for: indexPath) as! CarouselCell
         
         cell.imageView.image = images[indexPath.row]
+        cell.eaglContext = eaglContext
+        cell.ciContext = ciContext
+        
+        if filteredImages != nil {
+            cell.filteredImage = filteredImages[indexPath.row]
+        }
         
         
         return cell
