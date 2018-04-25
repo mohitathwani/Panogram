@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Panogram
+@testable import Panogram___Panoramas_for_Instagram
 
 class PanogramTests: XCTestCase {
     

@@ -32,6 +32,7 @@
 		06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
 		06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECF81F036F0000D16E19 /* PanogramUITests.swift */; };
 		06CAED071F0375F900D16E19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAED061F0375F900D16E19 /* Extensions.swift */; };
+		06DACD6C209022D500847C36 /* ImageSelectionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */; };
 		06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E1922920354E2600FCA2AD /* Assets.xcassets */; };
 		06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */; };
 		06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B81F12D132006DD450 /* PhotoEditor.swift */; };
@@ -89,6 +90,7 @@
 		06CAECF81F036F0000D16E19 /* PanogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramUITests.swift; sourceTree = "<group>"; };
 		06CAECFA1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06CAED061F0375F900D16E19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVCTests.swift; sourceTree = "<group>"; };
 		06E1922920354E2600FCA2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditVC.swift; sourceTree = "<group>"; };
 		06F7A8B81F12D132006DD450 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			children = (
 				06CAECED1F036F0000D16E19 /* PanogramTests.swift */,
 				06CAECEF1F036F0000D16E19 /* Info.plist */,
+				06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */,
 			);
 			path = PanogramTests;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */,
+				06DACD6C209022D500847C36 /* ImageSelectionVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,7 +841,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram.app/Panogram";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
 			};
 			name = Debug;
 		};
@@ -854,7 +858,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram.app/Panogram";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
 			};
 			name = Release;
 		};

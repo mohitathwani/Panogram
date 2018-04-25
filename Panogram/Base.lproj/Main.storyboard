@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AWA-fK-Zt9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AWA-fK-Zt9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Light</string>
-        </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-Medium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--LaunchVC-->
         <scene sceneID="tne-QT-ifu">
@@ -57,7 +49,7 @@
                         <outlet property="logoCenterYConstraint" destination="rOH-Qw-jIi" id="0Ns-YK-fZq"/>
                         <outlet property="logoImageView" destination="VqS-hx-iqk" id="zDG-Tw-oGD"/>
                         <outlet property="selectImageButton" destination="7jm-Y3-zuc" id="fE0-bC-0qZ"/>
-                        <segue destination="AWA-fK-Zt9" kind="showDetail" identifier="imageSelectionSegue" action="showViewController:sender:" id="3yW-Ei-1tj"/>
+                        <segue destination="AWA-fK-Zt9" kind="showDetail" identifier="imageSelectionSegue" id="3yW-Ei-1tj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,7 +59,7 @@
         <!--Image SelectionVC-->
         <scene sceneID="VEu-fO-tVe">
             <objects>
-                <viewController id="DR0-Gg-sKr" customClass="ImageSelectionVC" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelectionVC" id="DR0-Gg-sKr" customClass="ImageSelectionVC" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PoG-ve-2V8"/>
                         <viewControllerLayoutGuide type="bottom" id="GlG-VF-dcW"/>
@@ -165,7 +157,7 @@
         <!--Image EditVC-->
         <scene sceneID="8jA-p6-TR0">
             <objects>
-                <viewController id="Tvd-Y2-G0s" customClass="ImageEditVC" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageEditVC" id="Tvd-Y2-G0s" customClass="ImageEditVC" customModule="Panogram___Panoramas_for_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ilj-PF-LIp"/>
                         <viewControllerLayoutGuide type="bottom" id="6Rj-6h-Rar"/>
