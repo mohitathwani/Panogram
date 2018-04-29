@@ -21,6 +21,7 @@ class ImageSelectionVCTests: XCTestCase {
         selectionVC = storyboard.instantiateViewController(withIdentifier: "ImageSelectionVC") as! ImageSelectionVC
         
         let _ = selectionVC.view
+        selectionVC.viewDidAppear(false)
     }
     
     func test_title_Panoramas() {
@@ -59,9 +60,15 @@ class ImageSelectionVCTests: XCTestCase {
         XCTAssertNotNil(tableView)
     }
     
+    func test_table_view_separator_is_clear() {
+        let tableView = selectionVC.tableView
+        
+        XCTAssert(tableView?.separatorColor == UIColor.clear)
+    }
+    
     func test_table_view_has_data_source() {
         let tableView = selectionVC.tableView
-        selectionVC.viewDidAppear(false)
+        
         let dataSource = tableView?.dataSource
         XCTAssertNotNil(dataSource)
         XCTAssert(dataSource is TableViewDataSource)
@@ -69,7 +76,7 @@ class ImageSelectionVCTests: XCTestCase {
     
     func test_table_view_has_delegate() {
         let tableView = selectionVC.tableView
-        selectionVC.viewDidAppear(false)
+        
         let delegate = tableView?.delegate
         XCTAssertNotNil(delegate)
         XCTAssert(delegate is TableViewDelegate)
