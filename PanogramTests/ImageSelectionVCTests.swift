@@ -24,7 +24,7 @@ class ImageSelectionVCTests: XCTestCase {
     }
     
     func test_title_Panoramas() {
-        
+
         XCTAssertEqual(selectionVC.title, "Panoramas")
     }
     
@@ -32,5 +32,46 @@ class ImageSelectionVCTests: XCTestCase {
         let nextButton = selectionVC.navigationItem.rightBarButtonItem
         
         XCTAssertEqual(nextButton!.title!, "Next")
+    }
+    
+    func test_next_button_disabled() {
+        let nextButton = selectionVC.navigationItem.rightBarButtonItem
+        XCTAssert(nextButton?.isEnabled == false)
+    }
+    
+    func test_left_image_view_exists() {
+        let leftImageView = selectionVC.leftImageView
+        XCTAssertNotNil(leftImageView)
+    }
+    
+    func test_center_image_view_exists() {
+        let centerImageView = selectionVC.centerImageView
+        XCTAssertNotNil(centerImageView)
+    }
+    
+    func test_right_image_view_exists() {
+        let rightImageView = selectionVC.rightImageView
+        XCTAssertNotNil(rightImageView)
+    }
+    
+    func test_table_view_exists() {
+        let tableView = selectionVC.tableView
+        XCTAssertNotNil(tableView)
+    }
+    
+    func test_table_view_has_data_source() {
+        let tableView = selectionVC.tableView
+        selectionVC.viewDidAppear(false)
+        let dataSource = tableView?.dataSource
+        XCTAssertNotNil(dataSource)
+        XCTAssert(dataSource is TableViewDataSource)
+    }
+    
+    func test_table_view_has_delegate() {
+        let tableView = selectionVC.tableView
+        selectionVC.viewDidAppear(false)
+        let delegate = tableView?.delegate
+        XCTAssertNotNil(delegate)
+        XCTAssert(delegate is TableViewDelegate)
     }
 }

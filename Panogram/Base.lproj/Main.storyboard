@@ -135,7 +135,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="567-KP-Umf">
-                        <barButtonItem key="rightBarButtonItem" title="Next" style="done" id="krt-XK-Jtj">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" style="done" id="krt-XK-Jtj">
                             <color key="tintColor" red="0.2196078431372549" green="0.59215686274509804" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="nextTapped:" destination="DR0-Gg-sKr" id="Xle-F0-YAt"/>
