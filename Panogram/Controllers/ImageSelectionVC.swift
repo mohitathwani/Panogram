@@ -10,6 +10,7 @@ import UIKit
 
 class ImageSelectionVC: UIViewController, ErrorPresenting {
     
+    @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var centerImageView: UIImageView!
@@ -87,6 +88,7 @@ extension ImageSelectionVC: CellSelected {
             leftImageView.image = images[0]
             centerImageView.image = images[1]
             rightImageView.image = images[2]
+            nextButton.isEnabled = true
         } catch PhotoEditorError.imageCutError {
             displayAlert(title: "Image Split Error", message: "There seems to be an issue trying to split the image. Please try with another image.", action: nil)
         } catch {}

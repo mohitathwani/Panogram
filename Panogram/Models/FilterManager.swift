@@ -52,12 +52,22 @@ class FilterManager {
     func apply(filter: Filter, toImages images:[UIImage]) -> [CIImage] {
         switch filter {
         case .blur:
-            fatalError("Not implemented yet")
-//            return applyBlur(toImages: images)
+//            fatalError("Not implemented yet")
+            return applyBlur(toImages: images)
             
         case .sepia:
             return applySepia(toImages: images)
         }
+    }
+    
+    private func applyBlur(toImages images:[UIImage]) -> [CIImage] {
+        let blurFilter = BlurFilter()
+        
+        var filteredImages = images.map {(image) in
+            return blurFilter.applyTo(image: image)
+        }
+        
+        return filteredImages
     }
     
     private func applySepia(toImages images:[UIImage]) -> [CIImage] {

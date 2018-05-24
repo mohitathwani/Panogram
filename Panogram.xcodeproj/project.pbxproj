@@ -1,939 +1,943 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 48;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE31F1705A80013FB5E /* GameKit.framework */; };
-        06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE51F1705B70013FB5E /* StoreKit.framework */; };
-        063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E4C841F22C65700F2D1AE /* FilterManager.swift */; };
-        06425396205A147200FDCA5B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425395205A147200FDCA5B /* CarouselView.swift */; };
-        06425398205A148B00FDCA5B /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06425397205A148B00FDCA5B /* CarouselView.xib */; };
-        064DA00E2064BF440002831C /* SepiaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DA00D2064BF440002831C /* SepiaFilter.swift */; };
-        0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
-        065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19652050FEC300AC1236 /* TableViewDataSource.swift */; };
-        065B19692050FFC900AC1236 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19682050FFC900AC1236 /* Protocols.swift */; };
-        065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B196B2051020700AC1236 /* TableViewDelegate.swift */; };
-        065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */; };
-        065E59D0205B78B600A56A2A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065E59CE205B78B600A56A2A /* CarouselCell.swift */; };
-        065E59D1205B78B600A56A2A /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065E59CF205B78B600A56A2A /* CarouselCell.xib */; };
-        065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */; };
-        0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
-        06942DEF2061FCEE00F4B7B3 /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */; };
-        06A245491F2186D000F5E748 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A245481F2186CF00F5E748 /* FilterCell.swift */; };
-        06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */; };
-        06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
-        06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */; };
-        06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECDC1F036EFF00D16E19 /* Main.storyboard */; };
-        06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */; };
-        06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
-        06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECF81F036F0000D16E19 /* PanogramUITests.swift */; };
-        06CAED071F0375F900D16E19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAED061F0375F900D16E19 /* Extensions.swift */; };
-        06DACD6C209022D500847C36 /* ImageSelectionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */; };
-        06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E1922920354E2600FCA2AD /* Assets.xcassets */; };
-        06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */; };
-        06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B81F12D132006DD450 /* PhotoEditor.swift */; };
-        A99BECA6A22AADE59D9CEF7C /* Pods_PanogramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */; };
-        C1999C2610CA9A46977A40AC /* Pods_Panogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25507FF770037C29F6A820B3 /* Pods_Panogram.framework */; };
-        FC6FF99E6A1CC3BAF6EE8C80 /* Pods_PanogramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */; };
+		06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE31F1705A80013FB5E /* GameKit.framework */; };
+		06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE51F1705B70013FB5E /* StoreKit.framework */; };
+		063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E4C841F22C65700F2D1AE /* FilterManager.swift */; };
+		06425396205A147200FDCA5B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06425395205A147200FDCA5B /* CarouselView.swift */; };
+		06425398205A148B00FDCA5B /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06425397205A148B00FDCA5B /* CarouselView.xib */; };
+		064DA00E2064BF440002831C /* SepiaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064DA00D2064BF440002831C /* SepiaFilter.swift */; };
+		0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0654492C1F06A471009CB3AC /* PhotosManager.swift */; };
+		065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19652050FEC300AC1236 /* TableViewDataSource.swift */; };
+		065B19692050FFC900AC1236 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B19682050FFC900AC1236 /* Protocols.swift */; };
+		065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B196B2051020700AC1236 /* TableViewDelegate.swift */; };
+		065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */; };
+		065E59D0205B78B600A56A2A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065E59CE205B78B600A56A2A /* CarouselCell.swift */; };
+		065E59D1205B78B600A56A2A /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065E59CF205B78B600A56A2A /* CarouselCell.xib */; };
+		065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */; };
+		0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
+		06942DEF2061FCEE00F4B7B3 /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */; };
+		06A245491F2186D000F5E748 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A245481F2186CF00F5E748 /* FilterCell.swift */; };
+		06AEEFB720B652780037152A /* BlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AEEFB620B652780037152A /* BlurFilter.swift */; };
+		06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */; };
+		06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
+		06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */; };
+		06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECDC1F036EFF00D16E19 /* Main.storyboard */; };
+		06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */; };
+		06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
+		06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECF81F036F0000D16E19 /* PanogramUITests.swift */; };
+		06CAED071F0375F900D16E19 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAED061F0375F900D16E19 /* Extensions.swift */; };
+		06DACD6C209022D500847C36 /* ImageSelectionVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */; };
+		06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E1922920354E2600FCA2AD /* Assets.xcassets */; };
+		06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */; };
+		06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F7A8B81F12D132006DD450 /* PhotoEditor.swift */; };
+		A99BECA6A22AADE59D9CEF7C /* Pods_PanogramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */; };
+		C1999C2610CA9A46977A40AC /* Pods_Panogram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25507FF770037C29F6A820B3 /* Pods_Panogram.framework */; };
+		FC6FF99E6A1CC3BAF6EE8C80 /* Pods_PanogramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        06CAECEA1F036F0000D16E19 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 06CAECCD1F036EFF00D16E19 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 06CAECD41F036EFF00D16E19;
-            remoteInfo = Panogram;
-        };
-        06CAECF51F036F0000D16E19 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 06CAECCD1F036EFF00D16E19 /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 06CAECD41F036EFF00D16E19;
-            remoteInfo = Panogram;
-        };
+		06CAECEA1F036F0000D16E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CAECCD1F036EFF00D16E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CAECD41F036EFF00D16E19;
+			remoteInfo = Panogram;
+		};
+		06CAECF51F036F0000D16E19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06CAECCD1F036EFF00D16E19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06CAECD41F036EFF00D16E19;
+			remoteInfo = Panogram;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        06073FE31F1705A80013FB5E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-        06073FE51F1705B70013FB5E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-        063E4C841F22C65700F2D1AE /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
-        06425395205A147200FDCA5B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-        06425397205A148B00FDCA5B /* CarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
-        064DA00D2064BF440002831C /* SepiaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepiaFilter.swift; sourceTree = "<group>"; };
-        0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
-        065B19652050FEC300AC1236 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
-        065B19682050FFC900AC1236 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-        065B196B2051020700AC1236 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
-        065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionCell.swift; sourceTree = "<group>"; };
-        065E59CE205B78B600A56A2A /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
-        065E59CF205B78B600A56A2A /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
-        065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
-        0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
-        06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
-        06A245481F2186CF00F5E748 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
-        06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
-        06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-        06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
-        06CAECDD1F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        06CAECE21F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        06CAECE41F036EFF00D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        06CAECE91F036F0000D16E19 /* PanogramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanogramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        06CAECED1F036F0000D16E19 /* PanogramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramTests.swift; sourceTree = "<group>"; };
-        06CAECEF1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        06CAECF81F036F0000D16E19 /* PanogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramUITests.swift; sourceTree = "<group>"; };
-        06CAECFA1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        06CAED061F0375F900D16E19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-        06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVCTests.swift; sourceTree = "<group>"; };
-        06E1922920354E2600FCA2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditVC.swift; sourceTree = "<group>"; };
-        06F7A8B81F12D132006DD450 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
-        0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests.debug.xcconfig"; sourceTree = "<group>"; };
-        1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests.debug.xcconfig"; sourceTree = "<group>"; };
-        25507FF770037C29F6A820B3 /* Pods_Panogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Panogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        415A59A9E576D1D2936570A5 /* Pods-PanogramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests.release.xcconfig"; sourceTree = "<group>"; };
-        63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PanogramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        6651C33C8550ADD66DF02C32 /* Pods-PanogramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests.release.xcconfig"; sourceTree = "<group>"; };
-        7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PanogramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-        83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Panogram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Panogram/Pods-Panogram.release.xcconfig"; sourceTree = "<group>"; };
-        CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Panogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Panogram/Pods-Panogram.debug.xcconfig"; sourceTree = "<group>"; };
+		06073FE31F1705A80013FB5E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		06073FE51F1705B70013FB5E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		063E4C841F22C65700F2D1AE /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
+		06425395205A147200FDCA5B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		06425397205A148B00FDCA5B /* CarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
+		064DA00D2064BF440002831C /* SepiaFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SepiaFilter.swift; sourceTree = "<group>"; };
+		0654492C1F06A471009CB3AC /* PhotosManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
+		065B19652050FEC300AC1236 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		065B19682050FFC900AC1236 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		065B196B2051020700AC1236 /* TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDelegate.swift; sourceTree = "<group>"; };
+		065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionCell.swift; sourceTree = "<group>"; };
+		065E59CE205B78B600A56A2A /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
+		065E59CF205B78B600A56A2A /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
+		065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
+		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
+		06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
+		06A245481F2186CF00F5E748 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		06AEEFB620B652780037152A /* BlurFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
+		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
+		06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
+		06CAECDD1F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		06CAECE21F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06CAECE41F036EFF00D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CAECE91F036F0000D16E19 /* PanogramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanogramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECED1F036F0000D16E19 /* PanogramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramTests.swift; sourceTree = "<group>"; };
+		06CAECEF1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PanogramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06CAECF81F036F0000D16E19 /* PanogramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanogramUITests.swift; sourceTree = "<group>"; };
+		06CAECFA1F036F0000D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06CAED061F0375F900D16E19 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVCTests.swift; sourceTree = "<group>"; };
+		06E1922920354E2600FCA2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEditVC.swift; sourceTree = "<group>"; };
+		06F7A8B81F12D132006DD450 /* PhotoEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEditor.swift; sourceTree = "<group>"; };
+		0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		25507FF770037C29F6A820B3 /* Pods_Panogram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Panogram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		415A59A9E576D1D2936570A5 /* Pods-PanogramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests.release.xcconfig"; sourceTree = "<group>"; };
+		63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PanogramTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6651C33C8550ADD66DF02C32 /* Pods-PanogramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PanogramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests.release.xcconfig"; sourceTree = "<group>"; };
+		7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PanogramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Panogram.release.xcconfig"; path = "Pods/Target Support Files/Pods-Panogram/Pods-Panogram.release.xcconfig"; sourceTree = "<group>"; };
+		CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Panogram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Panogram/Pods-Panogram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        06CAECD21F036EFF00D16E19 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */,
-                C1999C2610CA9A46977A40AC /* Pods_Panogram.framework in Frameworks */,
-                06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        06CAECE61F036F0000D16E19 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                A99BECA6A22AADE59D9CEF7C /* Pods_PanogramTests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        06CAECF11F036F0000D16E19 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                FC6FF99E6A1CC3BAF6EE8C80 /* Pods_PanogramUITests.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		06CAECD21F036EFF00D16E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */,
+				C1999C2610CA9A46977A40AC /* Pods_Panogram.framework in Frameworks */,
+				06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECE61F036F0000D16E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99BECA6A22AADE59D9CEF7C /* Pods_PanogramTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECF11F036F0000D16E19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC6FF99E6A1CC3BAF6EE8C80 /* Pods_PanogramUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        064DA00C2064BF310002831C /* Filters */ = {
-            isa = PBXGroup;
-            children = (
-                064DA00D2064BF440002831C /* SepiaFilter.swift */,
-            );
-            path = Filters;
-            sourceTree = "<group>";
-        };
-        065B19642050FE9D00AC1236 /* Data Source */ = {
-            isa = PBXGroup;
-            children = (
-                065B19652050FEC300AC1236 /* TableViewDataSource.swift */,
-            );
-            path = "Data Source";
-            sourceTree = "<group>";
-        };
-        065B19672050FFBB00AC1236 /* Protocols */ = {
-            isa = PBXGroup;
-            children = (
-                065B19682050FFC900AC1236 /* Protocols.swift */,
-            );
-            path = Protocols;
-            sourceTree = "<group>";
-        };
-        065B196A205101F100AC1236 /* Delegates */ = {
-            isa = PBXGroup;
-            children = (
-                065B196B2051020700AC1236 /* TableViewDelegate.swift */,
-            );
-            path = Delegates;
-            sourceTree = "<group>";
-        };
-        065E59CC205B787500A56A2A /* CarouselView */ = {
-            isa = PBXGroup;
-            children = (
-                06425395205A147200FDCA5B /* CarouselView.swift */,
-                06425397205A148B00FDCA5B /* CarouselView.xib */,
-            );
-            path = CarouselView;
-            sourceTree = "<group>";
-        };
-        065E59CD205B789600A56A2A /* CarouselCell */ = {
-            isa = PBXGroup;
-            children = (
-                065E59CE205B78B600A56A2A /* CarouselCell.swift */,
-                065E59CF205B78B600A56A2A /* CarouselCell.xib */,
-            );
-            path = CarouselCell;
-            sourceTree = "<group>";
-        };
-        0674C4E61F04B6CC00B26DD4 /* Controllers */ = {
-            isa = PBXGroup;
-            children = (
-                06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
-                06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */,
-                06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */,
-            );
-            path = Controllers;
-            sourceTree = "<group>";
-        };
-        0674C4E81F04B6FA00B26DD4 /* Views */ = {
-            isa = PBXGroup;
-            children = (
-                065E59CD205B789600A56A2A /* CarouselCell */,
-                0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
-                065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */,
-                06A245481F2186CF00F5E748 /* FilterCell.swift */,
-                065E59CC205B787500A56A2A /* CarouselView */,
-                06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */,
-            );
-            path = Views;
-            sourceTree = "<group>";
-        };
-        06CAECCC1F036EFF00D16E19 = {
-            isa = PBXGroup;
-            children = (
-                06CAECD71F036EFF00D16E19 /* Panogram */,
-                06CAECEC1F036F0000D16E19 /* PanogramTests */,
-                06CAECF71F036F0000D16E19 /* PanogramUITests */,
-                06CAECD61F036EFF00D16E19 /* Products */,
-                A2070AD1CC4D1127930F4174 /* Pods */,
-                21986DBFAECFBE28F8AC7684 /* Frameworks */,
-            );
-            sourceTree = "<group>";
-        };
-        06CAECD61F036EFF00D16E19 /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */,
-                06CAECE91F036F0000D16E19 /* PanogramTests.xctest */,
-                06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        06CAECD71F036EFF00D16E19 /* Panogram */ = {
-            isa = PBXGroup;
-            children = (
-                064DA00C2064BF310002831C /* Filters */,
-                065B196A205101F100AC1236 /* Delegates */,
-                065B19672050FFBB00AC1236 /* Protocols */,
-                065B19642050FE9D00AC1236 /* Data Source */,
-                06E1922920354E2600FCA2AD /* Assets.xcassets */,
-                06F7A8B51F12CE82006DD450 /* Models */,
-                0674C4E61F04B6CC00B26DD4 /* Controllers */,
-                0674C4E81F04B6FA00B26DD4 /* Views */,
-                06CAECD81F036EFF00D16E19 /* AppDelegate.swift */,
-                06CAECDC1F036EFF00D16E19 /* Main.storyboard */,
-                06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */,
-                06CAECE41F036EFF00D16E19 /* Info.plist */,
-                06CAED061F0375F900D16E19 /* Extensions.swift */,
-            );
-            path = Panogram;
-            sourceTree = "<group>";
-        };
-        06CAECEC1F036F0000D16E19 /* PanogramTests */ = {
-            isa = PBXGroup;
-            children = (
-                06CAECED1F036F0000D16E19 /* PanogramTests.swift */,
-                06CAECEF1F036F0000D16E19 /* Info.plist */,
-                06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */,
-            );
-            path = PanogramTests;
-            sourceTree = "<group>";
-        };
-        06CAECF71F036F0000D16E19 /* PanogramUITests */ = {
-            isa = PBXGroup;
-            children = (
-                06CAECF81F036F0000D16E19 /* PanogramUITests.swift */,
-                06CAECFA1F036F0000D16E19 /* Info.plist */,
-            );
-            path = PanogramUITests;
-            sourceTree = "<group>";
-        };
-        06F7A8B51F12CE82006DD450 /* Models */ = {
-            isa = PBXGroup;
-            children = (
-                065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */,
-                0654492C1F06A471009CB3AC /* PhotosManager.swift */,
-                06F7A8B81F12D132006DD450 /* PhotoEditor.swift */,
-                063E4C841F22C65700F2D1AE /* FilterManager.swift */,
-            );
-            path = Models;
-            sourceTree = "<group>";
-        };
-        21986DBFAECFBE28F8AC7684 /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                06073FE51F1705B70013FB5E /* StoreKit.framework */,
-                06073FE31F1705A80013FB5E /* GameKit.framework */,
-                25507FF770037C29F6A820B3 /* Pods_Panogram.framework */,
-                63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */,
-                7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
-        A2070AD1CC4D1127930F4174 /* Pods */ = {
-            isa = PBXGroup;
-            children = (
-                CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */,
-                83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */,
-                0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */,
-                6651C33C8550ADD66DF02C32 /* Pods-PanogramTests.release.xcconfig */,
-                1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */,
-                415A59A9E576D1D2936570A5 /* Pods-PanogramUITests.release.xcconfig */,
-            );
-            name = Pods;
-            sourceTree = "<group>";
-        };
+		064DA00C2064BF310002831C /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				064DA00D2064BF440002831C /* SepiaFilter.swift */,
+				06AEEFB620B652780037152A /* BlurFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		065B19642050FE9D00AC1236 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				065B19652050FEC300AC1236 /* TableViewDataSource.swift */,
+			);
+			path = "Data Source";
+			sourceTree = "<group>";
+		};
+		065B19672050FFBB00AC1236 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				065B19682050FFC900AC1236 /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		065B196A205101F100AC1236 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				065B196B2051020700AC1236 /* TableViewDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		065E59CC205B787500A56A2A /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				06425395205A147200FDCA5B /* CarouselView.swift */,
+				06425397205A148B00FDCA5B /* CarouselView.xib */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		065E59CD205B789600A56A2A /* CarouselCell */ = {
+			isa = PBXGroup;
+			children = (
+				065E59CE205B78B600A56A2A /* CarouselCell.swift */,
+				065E59CF205B78B600A56A2A /* CarouselCell.xib */,
+			);
+			path = CarouselCell;
+			sourceTree = "<group>";
+		};
+		0674C4E61F04B6CC00B26DD4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
+				06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */,
+				06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0674C4E81F04B6FA00B26DD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				065E59CD205B789600A56A2A /* CarouselCell */,
+				0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
+				065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */,
+				06A245481F2186CF00F5E748 /* FilterCell.swift */,
+				065E59CC205B787500A56A2A /* CarouselView */,
+				06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06CAECCC1F036EFF00D16E19 = {
+			isa = PBXGroup;
+			children = (
+				06CAECD71F036EFF00D16E19 /* Panogram */,
+				06CAECEC1F036F0000D16E19 /* PanogramTests */,
+				06CAECF71F036F0000D16E19 /* PanogramUITests */,
+				06CAECD61F036EFF00D16E19 /* Products */,
+				A2070AD1CC4D1127930F4174 /* Pods */,
+				21986DBFAECFBE28F8AC7684 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06CAECD61F036EFF00D16E19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */,
+				06CAECE91F036F0000D16E19 /* PanogramTests.xctest */,
+				06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06CAECD71F036EFF00D16E19 /* Panogram */ = {
+			isa = PBXGroup;
+			children = (
+				064DA00C2064BF310002831C /* Filters */,
+				065B196A205101F100AC1236 /* Delegates */,
+				065B19672050FFBB00AC1236 /* Protocols */,
+				065B19642050FE9D00AC1236 /* Data Source */,
+				06E1922920354E2600FCA2AD /* Assets.xcassets */,
+				06F7A8B51F12CE82006DD450 /* Models */,
+				0674C4E61F04B6CC00B26DD4 /* Controllers */,
+				0674C4E81F04B6FA00B26DD4 /* Views */,
+				06CAECD81F036EFF00D16E19 /* AppDelegate.swift */,
+				06CAECDC1F036EFF00D16E19 /* Main.storyboard */,
+				06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */,
+				06CAECE41F036EFF00D16E19 /* Info.plist */,
+				06CAED061F0375F900D16E19 /* Extensions.swift */,
+			);
+			path = Panogram;
+			sourceTree = "<group>";
+		};
+		06CAECEC1F036F0000D16E19 /* PanogramTests */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECED1F036F0000D16E19 /* PanogramTests.swift */,
+				06CAECEF1F036F0000D16E19 /* Info.plist */,
+				06DACD6B209022D500847C36 /* ImageSelectionVCTests.swift */,
+			);
+			path = PanogramTests;
+			sourceTree = "<group>";
+		};
+		06CAECF71F036F0000D16E19 /* PanogramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06CAECF81F036F0000D16E19 /* PanogramUITests.swift */,
+				06CAECFA1F036F0000D16E19 /* Info.plist */,
+			);
+			path = PanogramUITests;
+			sourceTree = "<group>";
+		};
+		06F7A8B51F12CE82006DD450 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */,
+				0654492C1F06A471009CB3AC /* PhotosManager.swift */,
+				06F7A8B81F12D132006DD450 /* PhotoEditor.swift */,
+				063E4C841F22C65700F2D1AE /* FilterManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21986DBFAECFBE28F8AC7684 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06073FE51F1705B70013FB5E /* StoreKit.framework */,
+				06073FE31F1705A80013FB5E /* GameKit.framework */,
+				25507FF770037C29F6A820B3 /* Pods_Panogram.framework */,
+				63C57EE477C4EC8A25D6BAC3 /* Pods_PanogramTests.framework */,
+				7A9C18003BF1BE30EA0196CC /* Pods_PanogramUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A2070AD1CC4D1127930F4174 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */,
+				83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */,
+				0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */,
+				6651C33C8550ADD66DF02C32 /* Pods-PanogramTests.release.xcconfig */,
+				1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */,
+				415A59A9E576D1D2936570A5 /* Pods-PanogramUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        06CAECD41F036EFF00D16E19 /* Panogram */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 06CAECFD1F036F0000D16E19 /* Build configuration list for PBXNativeTarget "Panogram" */;
-            buildPhases = (
-                265AB0BD5A0D8173635FF5CE /* [CP] Check Pods Manifest.lock */,
-                06CAECD11F036EFF00D16E19 /* Sources */,
-                06CAECD21F036EFF00D16E19 /* Frameworks */,
-                06CAECD31F036EFF00D16E19 /* Resources */,
-                2B7F4D82128D0567C3806882 /* [CP] Embed Pods Frameworks */,
-                6CA42FBC6900FDC6C39A1BC7 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = Panogram;
-            productName = Panogram;
-            productReference = 06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */;
-            productType = "com.apple.product-type.application";
-        };
-        06CAECE81F036F0000D16E19 /* PanogramTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 06CAED001F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramTests" */;
-            buildPhases = (
-                B536248612BEF77856139EB0 /* [CP] Check Pods Manifest.lock */,
-                06CAECE51F036F0000D16E19 /* Sources */,
-                06CAECE61F036F0000D16E19 /* Frameworks */,
-                06CAECE71F036F0000D16E19 /* Resources */,
-                93C81E3CF496E025B3555329 /* [CP] Embed Pods Frameworks */,
-                EC459123AE23E35F947DAF92 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                06CAECEB1F036F0000D16E19 /* PBXTargetDependency */,
-            );
-            name = PanogramTests;
-            productName = PanogramTests;
-            productReference = 06CAECE91F036F0000D16E19 /* PanogramTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        06CAECF31F036F0000D16E19 /* PanogramUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 06CAED031F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramUITests" */;
-            buildPhases = (
-                C99B54A699D8975A36C63568 /* [CP] Check Pods Manifest.lock */,
-                06CAECF01F036F0000D16E19 /* Sources */,
-                06CAECF11F036F0000D16E19 /* Frameworks */,
-                06CAECF21F036F0000D16E19 /* Resources */,
-                89FA4F818336BBC7262E9DA1 /* [CP] Embed Pods Frameworks */,
-                A4689670FE1553F760B2D287 /* [CP] Copy Pods Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                06CAECF61F036F0000D16E19 /* PBXTargetDependency */,
-            );
-            name = PanogramUITests;
-            productName = PanogramUITests;
-            productReference = 06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		06CAECD41F036EFF00D16E19 /* Panogram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CAECFD1F036F0000D16E19 /* Build configuration list for PBXNativeTarget "Panogram" */;
+			buildPhases = (
+				265AB0BD5A0D8173635FF5CE /* [CP] Check Pods Manifest.lock */,
+				06CAECD11F036EFF00D16E19 /* Sources */,
+				06CAECD21F036EFF00D16E19 /* Frameworks */,
+				06CAECD31F036EFF00D16E19 /* Resources */,
+				2B7F4D82128D0567C3806882 /* [CP] Embed Pods Frameworks */,
+				6CA42FBC6900FDC6C39A1BC7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Panogram;
+			productName = Panogram;
+			productReference = 06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06CAECE81F036F0000D16E19 /* PanogramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CAED001F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramTests" */;
+			buildPhases = (
+				B536248612BEF77856139EB0 /* [CP] Check Pods Manifest.lock */,
+				06CAECE51F036F0000D16E19 /* Sources */,
+				06CAECE61F036F0000D16E19 /* Frameworks */,
+				06CAECE71F036F0000D16E19 /* Resources */,
+				93C81E3CF496E025B3555329 /* [CP] Embed Pods Frameworks */,
+				EC459123AE23E35F947DAF92 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CAECEB1F036F0000D16E19 /* PBXTargetDependency */,
+			);
+			name = PanogramTests;
+			productName = PanogramTests;
+			productReference = 06CAECE91F036F0000D16E19 /* PanogramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06CAECF31F036F0000D16E19 /* PanogramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06CAED031F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramUITests" */;
+			buildPhases = (
+				C99B54A699D8975A36C63568 /* [CP] Check Pods Manifest.lock */,
+				06CAECF01F036F0000D16E19 /* Sources */,
+				06CAECF11F036F0000D16E19 /* Frameworks */,
+				06CAECF21F036F0000D16E19 /* Resources */,
+				89FA4F818336BBC7262E9DA1 /* [CP] Embed Pods Frameworks */,
+				A4689670FE1553F760B2D287 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06CAECF61F036F0000D16E19 /* PBXTargetDependency */,
+			);
+			name = PanogramUITests;
+			productName = PanogramUITests;
+			productReference = 06CAECF41F036F0000D16E19 /* PanogramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        06CAECCD1F036EFF00D16E19 /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0900;
-                LastUpgradeCheck = 0900;
-                ORGANIZATIONNAME = "Tera Mo Labs";
-                TargetAttributes = {
-                    06CAECD41F036EFF00D16E19 = {
-                        CreatedOnToolsVersion = 9.0;
-                        SystemCapabilities = {
-                            com.apple.GameCenter = {
-                                enabled = 1;
-                            };
-                            com.apple.InAppPurchase = {
-                                enabled = 1;
-                            };
-                        };
-                    };
-                    06CAECE81F036F0000D16E19 = {
-                        CreatedOnToolsVersion = 9.0;
-                        TestTargetID = 06CAECD41F036EFF00D16E19;
-                    };
-                    06CAECF31F036F0000D16E19 = {
-                        CreatedOnToolsVersion = 9.0;
-                        TestTargetID = 06CAECD41F036EFF00D16E19;
-                    };
-                };
-            };
-            buildConfigurationList = 06CAECD01F036EFF00D16E19 /* Build configuration list for PBXProject "Panogram" */;
-            compatibilityVersion = "Xcode 8.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 06CAECCC1F036EFF00D16E19;
-            productRefGroup = 06CAECD61F036EFF00D16E19 /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                06CAECD41F036EFF00D16E19 /* Panogram */,
-                06CAECE81F036F0000D16E19 /* PanogramTests */,
-                06CAECF31F036F0000D16E19 /* PanogramUITests */,
-            );
-        };
+		06CAECCD1F036EFF00D16E19 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Tera Mo Labs";
+				TargetAttributes = {
+					06CAECD41F036EFF00D16E19 = {
+						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					06CAECE81F036F0000D16E19 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 06CAECD41F036EFF00D16E19;
+					};
+					06CAECF31F036F0000D16E19 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 06CAECD41F036EFF00D16E19;
+					};
+				};
+			};
+			buildConfigurationList = 06CAECD01F036EFF00D16E19 /* Build configuration list for PBXProject "Panogram" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06CAECCC1F036EFF00D16E19;
+			productRefGroup = 06CAECD61F036EFF00D16E19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06CAECD41F036EFF00D16E19 /* Panogram */,
+				06CAECE81F036F0000D16E19 /* PanogramTests */,
+				06CAECF31F036F0000D16E19 /* PanogramUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        06CAECD31F036EFF00D16E19 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */,
-                06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */,
-                065E59D1205B78B600A56A2A /* CarouselCell.xib in Resources */,
-                06425398205A148B00FDCA5B /* CarouselView.xib in Resources */,
-                06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        06CAECE71F036F0000D16E19 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        06CAECF21F036F0000D16E19 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		06CAECD31F036EFF00D16E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */,
+				06E1922A20354E2600FCA2AD /* Assets.xcassets in Resources */,
+				065E59D1205B78B600A56A2A /* CarouselCell.xib in Resources */,
+				06425398205A148B00FDCA5B /* CarouselView.xib in Resources */,
+				06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECE71F036F0000D16E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECF21F036F0000D16E19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-        265AB0BD5A0D8173635FF5CE /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-Panogram-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        2B7F4D82128D0567C3806882 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-frameworks.sh",
-                "${BUILT_PRODUCTS_DIR}/ASJTagsView/ASJTagsView.framework",
-                "${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
-                "${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-                "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASJTagsView.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-                "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        6CA42FBC6900FDC6C39A1BC7 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        89FA4F818336BBC7262E9DA1 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        93C81E3CF496E025B3555329 /* [CP] Embed Pods Frameworks */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Embed Pods Frameworks";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests-frameworks.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        A4689670FE1553F760B2D287 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
-        B536248612BEF77856139EB0 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-PanogramTests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        C99B54A699D8975A36C63568 /* [CP] Check Pods Manifest.lock */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-                "${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-                "${PODS_ROOT}/Manifest.lock",
-            );
-            name = "[CP] Check Pods Manifest.lock";
-            outputPaths = (
-                "$(DERIVED_FILE_DIR)/Pods-PanogramUITests-checkManifestLockResult.txt",
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-            showEnvVarsInLog = 0;
-        };
-        EC459123AE23E35F947DAF92 /* [CP] Copy Pods Resources */ = {
-            isa = PBXShellScriptBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            inputPaths = (
-            );
-            name = "[CP] Copy Pods Resources";
-            outputPaths = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-            shellPath = /bin/sh;
-            shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests-resources.sh\"\n";
-            showEnvVarsInLog = 0;
-        };
+		265AB0BD5A0D8173635FF5CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Panogram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B7F4D82128D0567C3806882 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ASJTagsView/ASJTagsView.framework",
+				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASJTagsView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CA42FBC6900FDC6C39A1BC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		89FA4F818336BBC7262E9DA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93C81E3CF496E025B3555329 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4689670FE1553F760B2D287 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramUITests/Pods-PanogramUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B536248612BEF77856139EB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PanogramTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C99B54A699D8975A36C63568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PanogramUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC459123AE23E35F947DAF92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PanogramTests/Pods-PanogramTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        06CAECD11F036EFF00D16E19 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */,
-                06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */,
-                06A245491F2186D000F5E748 /* FilterCell.swift in Sources */,
-                0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
-                06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
-                065E59D0205B78B600A56A2A /* CarouselCell.swift in Sources */,
-                065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */,
-                06425396205A147200FDCA5B /* CarouselView.swift in Sources */,
-                06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
-                06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
-                06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,
-                064DA00E2064BF440002831C /* SepiaFilter.swift in Sources */,
-                065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */,
-                065B19692050FFC900AC1236 /* Protocols.swift in Sources */,
-                065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */,
-                0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
-                065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */,
-                063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */,
-                06942DEF2061FCEE00F4B7B3 /* StackContainerView.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        06CAECE51F036F0000D16E19 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */,
-                06DACD6C209022D500847C36 /* ImageSelectionVCTests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        06CAECF01F036F0000D16E19 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		06CAECD11F036EFF00D16E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */,
+				06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */,
+				06A245491F2186D000F5E748 /* FilterCell.swift in Sources */,
+				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
+				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
+				065E59D0205B78B600A56A2A /* CarouselCell.swift in Sources */,
+				065B2E7D1F0C9F5700991849 /* ImageSelectionCell.swift in Sources */,
+				06425396205A147200FDCA5B /* CarouselView.swift in Sources */,
+				06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */,
+				06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */,
+				06F7A8B71F12CF31006DD450 /* ImageEditVC.swift in Sources */,
+				064DA00E2064BF440002831C /* SepiaFilter.swift in Sources */,
+				065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */,
+				065B19692050FFC900AC1236 /* Protocols.swift in Sources */,
+				065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */,
+				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
+				065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */,
+				063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */,
+				06AEEFB720B652780037152A /* BlurFilter.swift in Sources */,
+				06942DEF2061FCEE00F4B7B3 /* StackContainerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECE51F036F0000D16E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */,
+				06DACD6C209022D500847C36 /* ImageSelectionVCTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06CAECF01F036F0000D16E19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06CAECF91F036F0000D16E19 /* PanogramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        06CAECEB1F036F0000D16E19 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 06CAECD41F036EFF00D16E19 /* Panogram */;
-            targetProxy = 06CAECEA1F036F0000D16E19 /* PBXContainerItemProxy */;
-        };
-        06CAECF61F036F0000D16E19 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 06CAECD41F036EFF00D16E19 /* Panogram */;
-            targetProxy = 06CAECF51F036F0000D16E19 /* PBXContainerItemProxy */;
-        };
+		06CAECEB1F036F0000D16E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CAECD41F036EFF00D16E19 /* Panogram */;
+			targetProxy = 06CAECEA1F036F0000D16E19 /* PBXContainerItemProxy */;
+		};
+		06CAECF61F036F0000D16E19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06CAECD41F036EFF00D16E19 /* Panogram */;
+			targetProxy = 06CAECF51F036F0000D16E19 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        06CAECDC1F036EFF00D16E19 /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                06CAECDD1F036EFF00D16E19 /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                06CAECE21F036EFF00D16E19 /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		06CAECDC1F036EFF00D16E19 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CAECDD1F036EFF00D16E19 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06CAECE21F036EFF00D16E19 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        06CAECFB1F036F0000D16E19 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        06CAECFC1F036F0000D16E19 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        06CAECFE1F036F0000D16E19 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                CURRENT_PROJECT_VERSION = 21;
-                DEVELOPMENT_TEAM = CB34G9Z4DX;
-                INFOPLIST_FILE = Panogram/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
-                PRODUCT_NAME = "Panogram - Panoramas for Instagram";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                VERSIONING_SYSTEM = "apple-generic";
-            };
-            name = Debug;
-        };
-        06CAECFF1F036F0000D16E19 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                CURRENT_PROJECT_VERSION = 21;
-                DEVELOPMENT_TEAM = CB34G9Z4DX;
-                INFOPLIST_FILE = Panogram/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
-                PRODUCT_NAME = "Panogram - Panoramas for Instagram";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                VERSIONING_SYSTEM = "apple-generic";
-            };
-            name = Release;
-        };
-        06CAED011F036F0000D16E19 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                DEVELOPMENT_TEAM = CB34G9Z4DX;
-                INFOPLIST_FILE = PanogramTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
-            };
-            name = Debug;
-        };
-        06CAED021F036F0000D16E19 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 6651C33C8550ADD66DF02C32 /* Pods-PanogramTests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                DEVELOPMENT_TEAM = CB34G9Z4DX;
-                INFOPLIST_FILE = PanogramTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
-            };
-            name = Release;
-        };
-        06CAED041F036F0000D16E19 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                DEVELOPMENT_TEAM = CB34G9Z4DX;
-                INFOPLIST_FILE = PanogramUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = Panogram;
-            };
-            name = Debug;
-        };
-        06CAED051F036F0000D16E19 /* Release */ = {
-            isa = XCBuildConfiguration;
-            baseConfigurationReference = 415A59A9E576D1D2936570A5 /* Pods-PanogramUITests.release.xcconfig */;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                DEVELOPMENT_TEAM = CB34G9Z4DX;
-                INFOPLIST_FILE = PanogramUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = Panogram;
-            };
-            name = Release;
-        };
+		06CAECFB1F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06CAECFC1F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06CAECFE1F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA68E2C7DF9EFC226A53E784 /* Pods-Panogram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 21;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = Panogram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
+				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		06CAECFF1F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83DAC3A1A786636D1DBC26A0 /* Pods-Panogram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 21;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = Panogram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
+				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		06CAED011F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B0F998006819277F9026B78 /* Pods-PanogramTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
+			};
+			name = Debug;
+		};
+		06CAED021F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6651C33C8550ADD66DF02C32 /* Pods-PanogramTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
+			};
+			name = Release;
+		};
+		06CAED041F036F0000D16E19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1966AF1AA5A218132252A010 /* Pods-PanogramUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Panogram;
+			};
+			name = Debug;
+		};
+		06CAED051F036F0000D16E19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 415A59A9E576D1D2936570A5 /* Pods-PanogramUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = CB34G9Z4DX;
+				INFOPLIST_FILE = PanogramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Panogram;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        06CAECD01F036EFF00D16E19 /* Build configuration list for PBXProject "Panogram" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                06CAECFB1F036F0000D16E19 /* Debug */,
-                06CAECFC1F036F0000D16E19 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        06CAECFD1F036F0000D16E19 /* Build configuration list for PBXNativeTarget "Panogram" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                06CAECFE1F036F0000D16E19 /* Debug */,
-                06CAECFF1F036F0000D16E19 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        06CAED001F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                06CAED011F036F0000D16E19 /* Debug */,
-                06CAED021F036F0000D16E19 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        06CAED031F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                06CAED041F036F0000D16E19 /* Debug */,
-                06CAED051F036F0000D16E19 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		06CAECD01F036EFF00D16E19 /* Build configuration list for PBXProject "Panogram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAECFB1F036F0000D16E19 /* Debug */,
+				06CAECFC1F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06CAECFD1F036F0000D16E19 /* Build configuration list for PBXNativeTarget "Panogram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAECFE1F036F0000D16E19 /* Debug */,
+				06CAECFF1F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06CAED001F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAED011F036F0000D16E19 /* Debug */,
+				06CAED021F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06CAED031F036F0000D16E19 /* Build configuration list for PBXNativeTarget "PanogramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06CAED041F036F0000D16E19 /* Debug */,
+				06CAED051F036F0000D16E19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-    };
-    rootObject = 06CAECCD1F036EFF00D16E19 /* Project object */;
+	};
+	rootObject = 06CAECCD1F036EFF00D16E19 /* Project object */;
 }

@@ -145,6 +145,7 @@
                     <connections>
                         <outlet property="centerImageView" destination="kEY-p2-XWm" id="92B-fJ-B9S"/>
                         <outlet property="leftImageView" destination="HCc-nm-vK6" id="aSL-oi-YC8"/>
+                        <outlet property="nextButton" destination="krt-XK-Jtj" id="yBy-Da-C5c"/>
                         <outlet property="rightImageView" destination="bOR-8i-3DF" id="gD2-qg-pUM"/>
                         <outlet property="tableView" destination="xQ5-7d-aQ2" id="0LD-u7-XL6"/>
                         <segue destination="Tvd-Y2-G0s" kind="show" identifier="imageEditSegue" id="XQp-WA-cDh"/>
