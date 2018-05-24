@@ -36,6 +36,7 @@ extension EnumCollection {
 enum Filter: String, EnumCollection {
     case blur = "Blur"
     case sepia = "Sepia"
+    case bloom = "Bloom"
 }
 
 class FilterManager {
@@ -57,7 +58,20 @@ class FilterManager {
             
         case .sepia:
             return applySepia(toImages: images)
+            
+        case .bloom:
+            return applyBloom(toImages: images)
         }
+    }
+    
+    private func applyBloom(toImages images:[UIImage]) -> [CIImage] {
+        let bloomFilter = BloomFilter()
+        
+        let filteredImages = images.map { (image) in
+            return bloomFilter.applyTo(image: image)
+        }
+        
+        return filteredImages
     }
     
     private func applyBlur(toImages images:[UIImage]) -> [CIImage] {
