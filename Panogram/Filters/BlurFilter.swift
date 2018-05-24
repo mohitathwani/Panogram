@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreImage
 
-class BlurFilter {
+class BlurFilter: Filterable {
     func applyTo(image: UIImage) -> CIImage{
         guard let ciImage = CIImage(image: image) else {
             fatalError("Could not convert UIImage to CIImage")

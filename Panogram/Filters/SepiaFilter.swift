@@ -9,7 +9,7 @@
 import UIKit
 import CoreImage
 
-class SepiaFilter {
+class SepiaFilter: Filterable{
     func applyTo(image: UIImage) -> CIImage{
         guard let ciImage = CIImage(image: image) else {
             fatalError("Could not convert UIImage to CIImage")

@@ -71,40 +71,34 @@ class FilterManager {
     private func applyComic(toImages images:[UIImage]) -> [CIImage] {
         let comicFilter = ComicFilter()
         
-        let filteredImages = images.map { (image) in
-            return comicFilter.applyTo(image: image)
-        }
-        
-        return filteredImages
+        return apply(filter: comicFilter, toImages: images)
     }
     
     private func applyBloom(toImages images:[UIImage]) -> [CIImage] {
         let bloomFilter = BloomFilter()
         
-        let filteredImages = images.map { (image) in
-            return bloomFilter.applyTo(image: image)
-        }
+        return apply(filter: bloomFilter, toImages: images)
         
-        return filteredImages
     }
     
     private func applyBlur(toImages images:[UIImage]) -> [CIImage] {
         let blurFilter = BlurFilter()
         
-        var filteredImages = images.map {(image) in
-            return blurFilter.applyTo(image: image)
-        }
-        
-        return filteredImages
+        return apply(filter: blurFilter, toImages: images)
     }
     
     private func applySepia(toImages images:[UIImage]) -> [CIImage] {
         let sepiaFilter = SepiaFilter()
         
-        var filteredCIImages = images.map { (image) -> CIImage in
-            return sepiaFilter.applyTo(image: image)
+        return apply(filter: sepiaFilter, toImages: images)
+    }
+    
+    private func apply(filter: Filterable, toImages images: [UIImage]) -> [CIImage] {
+        let filteredImages = images.map { (image) in
+            return filter.applyTo(image: image)
         }
-        return filteredCIImages
+        
+        return filteredImages
     }
     
     private func applyBlur(toImages images:[UIImage]) -> [UIImage] {
