@@ -26,6 +26,7 @@
 		06A245491F2186D000F5E748 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A245481F2186CF00F5E748 /* FilterCell.swift */; };
 		06AEEFB720B652780037152A /* BlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AEEFB620B652780037152A /* BlurFilter.swift */; };
 		06AEEFB920B6569A0037152A /* BloomFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AEEFB820B6569A0037152A /* BloomFilter.swift */; };
+		06AEEFBB20B657C00037152A /* ComicFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AEEFBA20B657C00037152A /* ComicFilter.swift */; };
 		06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */; };
 		06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
 		06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */; };
@@ -80,6 +81,7 @@
 		06A245481F2186CF00F5E748 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		06AEEFB620B652780037152A /* BlurFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
 		06AEEFB820B6569A0037152A /* BloomFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloomFilter.swift; sourceTree = "<group>"; };
+		06AEEFBA20B657C00037152A /* ComicFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicFilter.swift; sourceTree = "<group>"; };
 		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
 		06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				064DA00D2064BF440002831C /* SepiaFilter.swift */,
 				06AEEFB620B652780037152A /* BlurFilter.swift */,
 				06AEEFB820B6569A0037152A /* BloomFilter.swift */,
+				06AEEFBA20B657C00037152A /* ComicFilter.swift */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */,
 				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
 				065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */,
+				06AEEFBB20B657C00037152A /* ComicFilter.swift in Sources */,
 				063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */,
 				06AEEFB920B6569A0037152A /* BloomFilter.swift in Sources */,
 				06AEEFB720B652780037152A /* BlurFilter.swift in Sources */,
