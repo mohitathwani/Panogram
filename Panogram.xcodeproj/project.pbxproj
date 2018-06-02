@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0602AB6420C33A1E00AA341F /* OpenSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0602AB6320C33A1E00AA341F /* OpenSettingsView.swift */; };
 		06073FE41F1705A80013FB5E /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE31F1705A80013FB5E /* GameKit.framework */; };
 		06073FE61F1705B70013FB5E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06073FE51F1705B70013FB5E /* StoreKit.framework */; };
 		063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063E4C841F22C65700F2D1AE /* FilterManager.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0602AB6320C33A1E00AA341F /* OpenSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSettingsView.swift; sourceTree = "<group>"; };
 		06073FE31F1705A80013FB5E /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		06073FE51F1705B70013FB5E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		063E4C841F22C65700F2D1AE /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				06A245481F2186CF00F5E748 /* FilterCell.swift */,
 				065E59CC205B787500A56A2A /* CarouselView */,
 				06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */,
+				0602AB6320C33A1E00AA341F /* OpenSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				06AEEFB920B6569A0037152A /* BloomFilter.swift in Sources */,
 				06AEEFB720B652780037152A /* BlurFilter.swift in Sources */,
 				06942DEF2061FCEE00F4B7B3 /* StackContainerView.swift in Sources */,
+				0602AB6420C33A1E00AA341F /* OpenSettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +818,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -832,7 +836,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = CB34G9Z4DX;
 				INFOPLIST_FILE = Panogram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

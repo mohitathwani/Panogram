@@ -64,6 +64,15 @@ extension ImageSelectionVC {
                 })
                 
                 self?.displayAlert(title: "Panogram needs access to your photos", message: "Please go to the Settings app and grant permission to Panogram to access your photos.", action: openSettingsAction)
+                
+                DispatchQueue.main.async {
+                    let v = OpenSettingsView(frame: CGRect.zero)
+                    self?.view.addSubview(v)
+                    
+                    v.snp.makeConstraints({ (make) in
+                        make.edges.equalToSuperview()
+                    })
+                }
             }
         }
     }
