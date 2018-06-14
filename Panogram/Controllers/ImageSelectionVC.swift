@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ImageSelectionVC: UIViewController, ErrorPresenting {
-    
+class ImageSelectionVC: UIViewController, ErrorPresenting, OpenSettings {
+  
     @IBOutlet weak var nextButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rightImageView: UIImageView!
@@ -59,14 +59,12 @@ extension ImageSelectionVC {
                 
             }
             else {
-                let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default, handler: { (action) in
-                    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
-                })
-                
-                self?.displayAlert(title: "Panogram needs access to your photos", message: "Please go to the Settings app and grant permission to Panogram to access your photos.", action: openSettingsAction)
-                
                 DispatchQueue.main.async {
-                    let v = OpenSettingsView(frame: CGRect.zero)
+                  guard let unwrappedSelf = self else {
+                    fatalError("self is nil")
+                  }
+              
+                  let v = OpenSettingsView(frame: CGRect.zero, delegate: unwrappedSelf)
                     self?.view.addSubview(v)
                     
                     v.snp.makeConstraints({ (make) in
@@ -88,6 +86,10 @@ extension ImageSelectionVC {
             
         }
     }
+  
+  func openSettings() {
+    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+  }
 }
 
 extension ImageSelectionVC: CellSelected {
