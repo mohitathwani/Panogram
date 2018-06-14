@@ -9,14 +9,14 @@
 import UIKit
 import CoreImage
 
-class SepiaFilter: Filterable{
-    func applyTo(image: UIImage) -> CIImage{
-        guard let ciImage = CIImage(image: image) else {
-            fatalError("Could not convert UIImage to CIImage")
-        }
-        let filteredImage = ciImage.applyingFilter("CISepiaTone",
-                                                   parameters: [kCIInputIntensityKey: 0.9])
-        
-        return filteredImage
+class SepiaFilter: Filterable {
+  func applyTo(image: UIImage) -> CIImage {
+    guard let ciImage = CIImage(image: image) else {
+      fatalError("Could not convert UIImage to CIImage")
     }
+    let filteredImage =
+      ciImage.applyingFilter("CISepiaTone",
+                             parameters: [kCIInputIntensityKey: 0.9])
+    return filteredImage
+  }
 }

@@ -11,13 +11,18 @@ import UIKit
 class TableViewDataSource: NSObject, UITableViewDataSource, ManagesCellSection {
     
     var selectedIndexPath: IndexPath?
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PhotosManager.sharedManager.assets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "imagesSelectionCell", for: indexPath) as! ImageSelectionCell
+      guard let cell =
+        tableView.dequeueReusableCell(withIdentifier: "imagesSelectionCell",
+                                      for: indexPath) as? ImageSelectionCell
+        else {
+        fatalError()
+      }
         
         if selectedIndexPath != nil && selectedIndexPath! == indexPath {
             cell.setSelected(true)

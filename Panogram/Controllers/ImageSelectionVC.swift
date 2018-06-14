@@ -68,10 +68,10 @@ extension ImageSelectionVC {
             fatalError("self is nil")
           }
           
-          let v = OpenSettingsView(frame: CGRect.zero, delegate: unwrappedSelf)
-          self?.view.addSubview(v)
+          let osv = OpenSettingsView(frame: CGRect.zero, delegate: unwrappedSelf)
+          self?.view.addSubview(osv)
           
-          v.snp.makeConstraints({ (make) in
+          osv.snp.makeConstraints({ (make) in
             make.edges.equalToSuperview()
           })
         }

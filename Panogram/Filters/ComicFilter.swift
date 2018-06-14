@@ -11,12 +11,11 @@ import UIKit
 import CoreImage
 
 class ComicFilter: Filterable {
-    func applyTo(image: UIImage) -> CIImage{
+    func applyTo(image: UIImage) -> CIImage {
         guard let ciImage = CIImage(image: image) else {
             fatalError("Could not convert UIImage to CIImage")
         }
         let filteredImage = ciImage.applyingFilter("CIComicEffect")
-        
         return filteredImage
     }
 }

@@ -11,21 +11,21 @@ import GLKit
 
 extension CGRect
 {
-    func aspectFitInRect(target target: CGRect) -> CGRect
-    {
-        let scale: CGFloat =
-        {
+    func aspectFitInRect(target: CGRect) -> CGRect {
+        let scale: CGFloat = {
             let scale = target.width / self.width
             return self.height * scale <= target.height ?
                 scale :
                 target.height / self.height
         }()
+      
         let width = self.width * scale
         let height = self.height * scale
-        let x = target.midX - width / 2
-        let y = target.midY - height / 2
-        return CGRect(x: x,
-                      y: y,
+        let xPos = target.midX - width / 2
+        let yPos = target.midY - height / 2
+      
+        return CGRect(x: xPos,
+                      y: yPos,
                       width: width,
                       height: height)
     }
@@ -37,15 +37,13 @@ class CarouselCell: UICollectionViewCell, GLKViewDelegate {
     @IBOutlet weak var imageView: UIImageView!
     var filteredImage: CIImage? {
         willSet {
-            if(newValue != nil) {
+            if newValue != nil {
                 glkView.delegate = self
                 glkView.setNeedsDisplay()
                 glkView.isHidden = false
-            }
-            else {
+            } else {
                 glkView.isHidden = true
             }
-            
         }
     }
     
@@ -55,7 +53,7 @@ class CarouselCell: UICollectionViewCell, GLKViewDelegate {
         }
     }
     var ciContext: CIContext!
-    
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

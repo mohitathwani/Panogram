@@ -10,137 +10,139 @@ import UIKit
 import SnapKit
 
 class CarouselView: UIView {
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
+  @IBOutlet var contentView: UIView!
+  @IBOutlet weak var collectionView: UICollectionView!
+  @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
+  
+  var eaglContext: EAGLContext!
+  var ciContext: CIContext!
+  
+  lazy var images = [UIImage]()
+  var filteredImages: [CIImage]! {
+    didSet {
+      collectionView.reloadData()
+    }
+  }
+  
+  private var indexOfCellBeforeDragging = 0
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    fatalError()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    initializeView()
+  }
+  
+  func initializeView() {
+    Bundle.main.loadNibNamed("CarouselView", owner: self, options: nil)
+    addSubview(contentView)
     
-    var eaglContext: EAGLContext!
-    var ciContext: CIContext!
+    let carouselCellNib = UINib(nibName: "CarouselCell", bundle: nil)
     
-    lazy var images = [UIImage]()
-    var filteredImages: [CIImage]! {
-        didSet {
-            collectionView.reloadData()
-        }
+    collectionView.register(carouselCellNib, forCellWithReuseIdentifier: "CarouselCell")
+    
+    contentView.snp.makeConstraints { (make) in
+      make.edges.equalToSuperview()
     }
     
-    private var indexOfCellBeforeDragging = 0
+    collectionViewLayout.minimumLineSpacing = 0
+  }
+  
+  var collectionViewWidth: CGFloat {
+    return collectionViewLayout.collectionView!.frame.size.width
+  }
+  
+  var collectionViewHeight: CGFloat {
+    return collectionViewLayout.collectionView!.frame.size.height
+  }
+  
+  private func configureCollectionViewLayoutItemSize() {
+    let inset: CGFloat = calculateSectionInset()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        fatalError()
-    }
+    collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        initializeView()
-    }
+    collectionViewLayout.itemSize = CGSize(width: collectionViewWidth - inset * 2, height: collectionViewHeight)
     
-    func initializeView() {
-        Bundle.main.loadNibNamed("CarouselView", owner: self, options: nil)
-        addSubview(contentView)
-        
-        let carouselCellNib = UINib(nibName: "CarouselCell", bundle: nil)
-        
-        collectionView.register(carouselCellNib, forCellWithReuseIdentifier: "CarouselCell")
-        
-        contentView.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
-        
-        collectionViewLayout.minimumLineSpacing = 0
-    }
-    
-    var collectionViewWidth: CGFloat {
-        return collectionViewLayout.collectionView!.frame.size.width
-    }
-    
-    var collectionViewHeight: CGFloat {
-        return collectionViewLayout.collectionView!.frame.size.height
-    }
-    
-    private func configureCollectionViewLayoutItemSize() {
-        let inset: CGFloat = calculateSectionInset()
-        
-        collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
-        
-        collectionViewLayout.itemSize = CGSize(width: collectionViewWidth - inset * 2, height: collectionViewHeight)
-        
-        collectionViewLayout.collectionView!.reloadData()
-    }
-    
-    override func layoutSubviews() {
-        configureCollectionViewLayoutItemSize()
-    }
-    
-    private func calculateSectionInset() -> CGFloat {
-        return 100
-    }
-    
-    private func indexOfMajorCell() -> Int {
-        let itemWidth = collectionViewLayout.itemSize.width
-        let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
-        return Int(round(proportionalOffset))
-    }
-    
-    func scrollToCenter() {
-        let indexPath = IndexPath(row: 1, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-    }
+    collectionViewLayout.collectionView!.reloadData()
+  }
+  
+  override func layoutSubviews() {
+    configureCollectionViewLayoutItemSize()
+  }
+  
+  private func calculateSectionInset() -> CGFloat {
+    return 100
+  }
+  
+  private func indexOfMajorCell() -> Int {
+    let itemWidth = collectionViewLayout.itemSize.width
+    let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
+    return Int(round(proportionalOffset))
+  }
+  
+  func scrollToCenter() {
+    let indexPath = IndexPath(row: 1, section: 0)
+    collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+  }
 }
 
 extension CarouselView: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 1
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return images.count
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCell", for: indexPath) as? CarouselCell else {
+      fatalError()
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+    cell.imageView.image = images[indexPath.row]
+    cell.eaglContext = eaglContext
+    cell.ciContext = ciContext
+    
+    if filteredImages != nil {
+      cell.filteredImage = filteredImages[indexPath.row]
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCell", for: indexPath) as! CarouselCell
-        
-        cell.imageView.image = images[indexPath.row]
-        cell.eaglContext = eaglContext
-        cell.ciContext = ciContext
-        
-        if filteredImages != nil {
-            cell.filteredImage = filteredImages[indexPath.row]
-        }
-        
-        
-        return cell
-    }
+    
+    return cell
+  }
 }
 
 extension CarouselView: UICollectionViewDelegate {
+  
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    indexOfCellBeforeDragging = indexOfMajorCell()
+  }
+  
+  func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
     
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        indexOfCellBeforeDragging = indexOfMajorCell()
-    }
+    targetContentOffset.pointee = scrollView.contentOffset
+    let indexOfMajorCell = self.indexOfMajorCell()
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        targetContentOffset.pointee = scrollView.contentOffset
-        let indexOfMajorCell = self.indexOfMajorCell()
-        
-        let swipeVelocityThreshold: CGFloat = 0.5
-        let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < images.count && velocity.x > swipeVelocityThreshold
-        let hasEnoughVelocityToSlideToThePreviousCell = indexOfCellBeforeDragging - 1 >= 0 && velocity.x <  swipeVelocityThreshold
-        let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
-        let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
-        if didUseSwipeToSkipCell {
-            let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
-            let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
-            // Damping equal 1 => no oscillations => decay animation:
-            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
-                scrollView.contentOffset = CGPoint(x: toValue, y: 0)
-                scrollView.layoutIfNeeded()
-            }, completion: nil)
-        } else {
-            let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
-            collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        }
+    let swipeVelocityThreshold: CGFloat = 0.5
+    let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < images.count && velocity.x > swipeVelocityThreshold
+    let hasEnoughVelocityToSlideToThePreviousCell = indexOfCellBeforeDragging - 1 >= 0 && velocity.x <  swipeVelocityThreshold
+    let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
+    let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
+    if didUseSwipeToSkipCell {
+      let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
+      let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
+      // Damping equal 1 => no oscillations => decay animation:
+      UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
+        scrollView.contentOffset = CGPoint(x: toValue, y: 0)
+        scrollView.layoutIfNeeded()
+      }, completion: nil)
+    } else {
+      let indexPath = IndexPath(row: indexOfMajorCell, section: 0)
+      collectionViewLayout.collectionView!.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
+  }
 }

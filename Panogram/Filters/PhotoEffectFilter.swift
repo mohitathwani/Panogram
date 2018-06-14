@@ -11,12 +11,11 @@ import UIKit
 import CoreImage
 
 class PhotoEffectFilter: Filterable {
-    func applyTo(image: UIImage) -> CIImage{
-        guard let ciImage = CIImage(image: image) else {
-            fatalError("Could not convert UIImage to CIImage")
-        }
-        let filteredImage = ciImage.applyingFilter("CIPhotoEffectInstant")
-        
-        return filteredImage
+  func applyTo(image: UIImage) -> CIImage {
+    guard let ciImage = CIImage(image: image) else {
+      fatalError("Could not convert UIImage to CIImage")
     }
+    let filteredImage = ciImage.applyingFilter("CIPhotoEffectInstant")
+    return filteredImage
+  }
 }
