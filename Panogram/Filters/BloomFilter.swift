@@ -16,7 +16,7 @@ class BloomFilter: Filterable {
       fatalError("Could not convert UIImage to CIImage")
     }
     let filteredImage =
-      ciImage.applyingFilter("CIBloom", parameters: [kCIInputRadiusKey : 5,
+      ciImage.applyingFilter("CIBloom", parameters: [kCIInputRadiusKey: 5,
                                                      kCIInputIntensityKey: 1])
     return filteredImage
   }
