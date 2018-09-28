@@ -12,7 +12,7 @@ import XCTest
 class ImageSelectionVCTests: XCTestCase {
 
   var selectionVC: ImageSelectionVC!
-  
+
   override func setUp() {
     super.setUp()
 
@@ -22,7 +22,7 @@ class ImageSelectionVCTests: XCTestCase {
         as? ImageSelectionVC else {
           fatalError()
     }
-    
+
     _ = selectionVC.view
     selectionVC.viewDidAppear(false)
   }
@@ -42,7 +42,7 @@ class ImageSelectionVCTests: XCTestCase {
     let nextButton = selectionVC.navigationItem.rightBarButtonItem
     XCTAssert(nextButton?.isEnabled == false)
   }
-  
+
   func test_left_image_view_exists() {
     let leftImageView = selectionVC.leftImageView
     XCTAssertNotNil(leftImageView)
