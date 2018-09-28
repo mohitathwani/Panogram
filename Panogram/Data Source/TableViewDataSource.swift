@@ -9,13 +9,13 @@
 import UIKit
 
 class TableViewDataSource: NSObject, UITableViewDataSource, ManagesCellSection {
-    
+
     var selectedIndexPath: IndexPath?
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return PhotosManager.sharedManager.assets.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       guard let cell =
         tableView.dequeueReusableCell(withIdentifier: "imagesSelectionCell",
@@ -23,13 +23,13 @@ class TableViewDataSource: NSObject, UITableViewDataSource, ManagesCellSection {
         else {
         fatalError()
       }
-        
+
         if selectedIndexPath != nil && selectedIndexPath! == indexPath {
             cell.setSelected(true)
         } else {
             cell.setSelected(false)
         }
-        
+
         PhotosManager.sharedManager.fetchImage(at: indexPath.row, cached: true) { (row, image) in
             if row == indexPath.row {
                 cell.panoramaImageView.image = image
