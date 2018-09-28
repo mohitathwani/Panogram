@@ -17,10 +17,10 @@ extension UIColor {
     let red = CGFloat(Double(red)/255.0)
     let green = CGFloat(Double(green)/255.0)
     let blue = CGFloat(Double(blue)/255.0)
-    
+
     self.init(red: red, green: green, blue: blue, alpha: 1.0)
   }
-  
+
   convenience public init(hex: Int) {
     let red = UInt8(((hex >> 16) & 0xFF))
     let green = UInt8(((hex >> 8) & 0xFF))
@@ -33,11 +33,11 @@ extension ErrorPresenting where Self: UIViewController {
   func displayAlert(title: String, message: String, action: UIAlertAction?) {
     let alertController = UIAlertController(title: title, message: message,
                                             preferredStyle: .alert)
-    
+
     let cancelAction = UIAlertAction(title: "Cancel", style: .cancel,
                                      handler: nil)
     alertController.addAction(cancelAction)
-    
+
     if action != nil {
       alertController.addAction(action!)
     }
@@ -58,14 +58,14 @@ extension UIImage {
                                      kCVPixelFormatType_32ARGB,
                                      attrs,
                                      &pixelBuffer)
-    
+
     guard let resultPixelBuffer = pixelBuffer, status == kCVReturnSuccess else {
       return nil
     }
-    
+
     CVPixelBufferLockBaseAddress(resultPixelBuffer, CVPixelBufferLockFlags(rawValue: 0))
     let pixelData = CVPixelBufferGetBaseAddress(resultPixelBuffer)
-    
+
     let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
     guard let context = CGContext(data: pixelData,
                                   width: Int(width),
@@ -76,10 +76,10 @@ extension UIImage {
                                   bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue) else {
                                     return nil
     }
-    
+
     context.translateBy(x: 0, y: height)
     context.scaleBy(x: 1.0, y: -1.0)
-    
+
     UIGraphicsPushContext(context)
     self.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
     UIGraphicsPopContext()
