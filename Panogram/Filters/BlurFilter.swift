@@ -17,7 +17,7 @@ class BlurFilter: Filterable {
         }
         let filteredImage = ciImage.applyingFilter("CIGaussianBlur",
                                                    parameters: [kCIInputRadiusKey: 5])
-        
+
         return filteredImage
     }
 }
