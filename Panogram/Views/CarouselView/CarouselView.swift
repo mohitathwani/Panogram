@@ -25,7 +25,7 @@ class CarouselView: UIView {
   }
   
   private var indexOfCellBeforeDragging = 0
-  
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     fatalError()
@@ -39,7 +39,7 @@ class CarouselView: UIView {
   func initializeView() {
     Bundle.main.loadNibNamed("CarouselView", owner: self, options: nil)
     addSubview(contentView)
-    
+
     let carouselCellNib = UINib(nibName: "CarouselCell", bundle: nil)
     
     collectionView.register(carouselCellNib, forCellWithReuseIdentifier: "CarouselCell")
@@ -54,7 +54,7 @@ class CarouselView: UIView {
   var collectionViewWidth: CGFloat {
     return collectionViewLayout.collectionView!.frame.size.width
   }
-  
+
   var collectionViewHeight: CGFloat {
     return collectionViewLayout.collectionView!.frame.size.height
   }
@@ -93,50 +93,64 @@ extension CarouselView: UICollectionViewDataSource {
   func numberOfSections(in collectionView: UICollectionView) -> Int {
     return 1
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return images.count
   }
-  
+
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CarouselCell", for: indexPath) as? CarouselCell else {
+    guard let cell = collectionView.dequeueReusableCell(
+      withReuseIdentifier: "CarouselCell", for: indexPath) as? CarouselCell else {
       fatalError()
     }
-    
+
     cell.imageView.image = images[indexPath.row]
     cell.eaglContext = eaglContext
     cell.ciContext = ciContext
-    
+
     if filteredImages != nil {
       cell.filteredImage = filteredImages[indexPath.row]
     }
-    
-    
     return cell
   }
 }
 
 extension CarouselView: UICollectionViewDelegate {
-  
+
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     indexOfCellBeforeDragging = indexOfMajorCell()
   }
-  
-  func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-    
+
+  fileprivate func canSlideToNextCell(_ velocity: CGPoint,
+                                      _ swipeVelocityThreshold: CGFloat) -> Bool {
+    return indexOfCellBeforeDragging + 1 < images.count && velocity.x > swipeVelocityThreshold
+  }
+
+  fileprivate func canSlideToPreviousCell(_ velocity: CGPoint, _ swipeVelocityThreshold: CGFloat) -> Bool {
+    return indexOfCellBeforeDragging - 1 >= 0 && velocity.x <  swipeVelocityThreshold
+  }
+
+  func scrollViewWillEndDragging(_ scrollView: UIScrollView,
+                                 withVelocity velocity: CGPoint,
+                                 targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+
     targetContentOffset.pointee = scrollView.contentOffset
     let indexOfMajorCell = self.indexOfMajorCell()
-    
+
     let swipeVelocityThreshold: CGFloat = 0.5
-    let hasEnoughVelocityToSlideToTheNextCell = indexOfCellBeforeDragging + 1 < images.count && velocity.x > swipeVelocityThreshold
-    let hasEnoughVelocityToSlideToThePreviousCell = indexOfCellBeforeDragging - 1 >= 0 && velocity.x <  swipeVelocityThreshold
+    let hasEnoughVelocityToSlideToNext = canSlideToNextCell(velocity, swipeVelocityThreshold)
+    let hasEnoughVelocityToSlideToPrevious = canSlideToPreviousCell(velocity, swipeVelocityThreshold)
     let majorCellIsTheCellBeforeDragging = indexOfMajorCell == indexOfCellBeforeDragging
-    let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging && (hasEnoughVelocityToSlideToTheNextCell || hasEnoughVelocityToSlideToThePreviousCell)
+    let didUseSwipeToSkipCell = majorCellIsTheCellBeforeDragging &&
+      (hasEnoughVelocityToSlideToNext || hasEnoughVelocityToSlideToPrevious)
     if didUseSwipeToSkipCell {
-      let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToTheNextCell ? 1 : -1)
+      let snapToIndex = indexOfCellBeforeDragging + (hasEnoughVelocityToSlideToNext ? 1 : -1)
       let toValue = collectionViewLayout.itemSize.width * CGFloat(snapToIndex)
       // Damping equal 1 => no oscillations => decay animation:
-      UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: velocity.x, options: .allowUserInteraction, animations: {
+      UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1,
+                     initialSpringVelocity: velocity.x,
+                     options: .allowUserInteraction,
+                     animations: {
         scrollView.contentOffset = CGPoint(x: toValue, y: 0)
         scrollView.layoutIfNeeded()
       }, completion: nil)
