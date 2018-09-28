@@ -11,12 +11,12 @@ import UIKit
 import CoreImage
 
 class BlurFilter: Filterable {
-    func applyTo(image: UIImage) -> CIImage{
+    func applyTo(image: UIImage) -> CIImage {
         guard let ciImage = CIImage(image: image) else {
             fatalError("Could not convert UIImage to CIImage")
         }
         let filteredImage = ciImage.applyingFilter("CIGaussianBlur",
-                                                   parameters: [kCIInputRadiusKey   : 5])
+                                                   parameters: [kCIInputRadiusKey: 5])
         
         return filteredImage
     }
