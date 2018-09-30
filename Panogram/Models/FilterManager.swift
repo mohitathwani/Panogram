@@ -49,7 +49,7 @@ class FilterManager {
 
     private init() {
         eaglContext = EAGLContext(api: EAGLRenderingAPI.openGLES2)
-        ciContext = CIContext(eaglContext: eaglContext, options: [kCIContextWorkingColorSpace: NSNull()])
+        ciContext = CIContext(eaglContext: eaglContext, options: convertToOptionalCIContextOptionDictionary([convertFromCIContextOption(CIContextOption.workingColorSpace): NSNull()]))
     }
 
     func apply(filter: Filter, toImages images: [UIImage]) -> [CIImage] {
@@ -134,4 +134,15 @@ class FilterManager {
         }
         return outputImages
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+private func convertToOptionalCIContextOptionDictionary(_ input: [String: Any]?) -> [CIContextOption: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (CIContextOption(rawValue: key), value)})
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+private func convertFromCIContextOption(_ input: CIContextOption) -> String {
+	return input.rawValue
 }

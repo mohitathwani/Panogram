@@ -89,7 +89,7 @@ extension ImageSelectionVC {
   }
 
   func openSettings() {
-    UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
+    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
   }
 }
 

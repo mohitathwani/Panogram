@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions
-    launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
     UINavigationBar.appearance().titleTextAttributes =
-      [NSAttributedStringKey.foregroundColor: UIColor(hex: 0x191919),
-       NSAttributedStringKey.font: UIFont(name: "HelveticaNeue-Bold",
+      [NSAttributedString.Key.foregroundColor: UIColor(hex: 0x191919),
+       NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold",
                                           size: 20)!]
     return true
   }

@@ -6,7 +6,7 @@ target 'Panogram' do
   use_frameworks!
 
   # Pods for Panogram
-pod "Pastel"
+  #pod "Pastel"
 pod 'SnapKit'
 pod 'SVProgressHUD'
 pod 'ASJTagsView'
@@ -19,6 +19,18 @@ pod 'ASJTagsView'
   target 'PanogramUITests' do
     inherit! :search_paths
     # Pods for testing
+  end
+  
+  swift_4_1_pod_targets = ['SnapKit']
+  
+  post_install do | installer |
+    installer.pods_project.targets.each do |target|
+      if swift_4_1_pod_targets.include?(target.name)
+        target.build_configurations.each do |config|
+          config.build_settings['SWIFT_VERSION'] = '4.1'
+        end
+      end
+    end
   end
 
 end

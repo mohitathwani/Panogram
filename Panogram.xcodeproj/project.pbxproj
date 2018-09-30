@@ -22,7 +22,6 @@
 		065E59D0205B78B600A56A2A /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065E59CE205B78B600A56A2A /* CarouselCell.swift */; };
 		065E59D1205B78B600A56A2A /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 065E59CF205B78B600A56A2A /* CarouselCell.xib */; };
 		065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */; };
-		0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */; };
 		06942DEF2061FCEE00F4B7B3 /* StackContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */; };
 		06A245491F2186D000F5E748 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A245481F2186CF00F5E748 /* FilterCell.swift */; };
 		06AEEFB720B652780037152A /* BlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AEEFB620B652780037152A /* BlurFilter.swift */; };
@@ -31,7 +30,6 @@
 		06AEEFBD20B65AB30037152A /* PhotoEffectFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AEEFBC20B65AB30037152A /* PhotoEffectFilter.swift */; };
 		06C939171F0C993C00C195A4 /* ImageSelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */; };
 		06CAECD91F036EFF00D16E19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECD81F036EFF00D16E19 /* AppDelegate.swift */; };
-		06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */; };
 		06CAECDE1F036EFF00D16E19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECDC1F036EFF00D16E19 /* Main.storyboard */; };
 		06CAECE31F036EFF00D16E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CAECE11F036EFF00D16E19 /* LaunchScreen.storyboard */; };
 		06CAECEE1F036F0000D16E19 /* PanogramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CAECED1F036F0000D16E19 /* PanogramTests.swift */; };
@@ -79,7 +77,6 @@
 		065E59CE205B78B600A56A2A /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		065E59CF205B78B600A56A2A /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
 		065E59D2205F516D00A56A2A /* GoogLeNetPlaces.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = GoogLeNetPlaces.mlmodel; sourceTree = "<group>"; };
-		0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchBackGroundView.swift; sourceTree = "<group>"; };
 		06942DEE2061FCEE00F4B7B3 /* StackContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackContainerView.swift; sourceTree = "<group>"; };
 		06A245481F2186CF00F5E748 /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		06AEEFB620B652780037152A /* BlurFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurFilter.swift; sourceTree = "<group>"; };
@@ -89,7 +86,6 @@
 		06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionVC.swift; sourceTree = "<group>"; };
 		06CAECD51F036EFF00D16E19 /* Panogram - Panoramas for Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panogram - Panoramas for Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		06CAECD81F036EFF00D16E19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		06CAECDD1F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06CAECE21F036EFF00D16E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06CAECE41F036EFF00D16E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,7 +198,6 @@
 		0674C4E61F04B6CC00B26DD4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				06CAECDA1F036EFF00D16E19 /* LaunchVC.swift */,
 				06C939161F0C993C00C195A4 /* ImageSelectionVC.swift */,
 				06F7A8B61F12CF31006DD450 /* ImageEditVC.swift */,
 			);
@@ -213,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				065E59CD205B789600A56A2A /* CarouselCell */,
-				0674C4E21F04721000B26DD4 /* LaunchBackGroundView.swift */,
 				065B2E7C1F0C9F5700991849 /* ImageSelectionCell.swift */,
 				06A245481F2186CF00F5E748 /* FilterCell.swift */,
 				065E59CC205B787500A56A2A /* CarouselView */,
@@ -398,6 +392,7 @@
 				TargetAttributes = {
 					06CAECD41F036EFF00D16E19 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -409,6 +404,7 @@
 					};
 					06CAECE81F036F0000D16E19 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1000;
 						TestTargetID = 06CAECD41F036EFF00D16E19;
 					};
 					06CAECF31F036F0000D16E19 = {
@@ -507,14 +503,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Panogram/Pods-Panogram-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ASJTagsView/ASJTagsView.framework",
-				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASJTagsView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -642,7 +636,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				06F7A8B91F12D132006DD450 /* PhotoEditor.swift in Sources */,
-				06CAECDB1F036EFF00D16E19 /* LaunchVC.swift in Sources */,
 				06A245491F2186D000F5E748 /* FilterCell.swift in Sources */,
 				0654492D1F06A471009CB3AC /* PhotosManager.swift in Sources */,
 				06CAED071F0375F900D16E19 /* Extensions.swift in Sources */,
@@ -657,7 +650,6 @@
 				065E59D3205F516D00A56A2A /* GoogLeNetPlaces.mlmodel in Sources */,
 				065B19692050FFC900AC1236 /* Protocols.swift in Sources */,
 				065B196C2051020700AC1236 /* TableViewDelegate.swift in Sources */,
-				0674C4E31F04721000B26DD4 /* LaunchBackGroundView.swift in Sources */,
 				065B19662050FEC300AC1236 /* TableViewDataSource.swift in Sources */,
 				06AEEFBB20B657C00037152A /* ComicFilter.swift in Sources */,
 				063E4C851F22C65700F2D1AE /* FilterManager.swift in Sources */,
@@ -839,7 +831,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
 				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -857,7 +849,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.Panogram;
 				PRODUCT_NAME = "Panogram - Panoramas for Instagram";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -874,7 +866,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
 			};
@@ -891,7 +883,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.teramolabs.PanogramTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Panogram - Panoramas for Instagram.app/Panogram - Panoramas for Instagram";
 			};
