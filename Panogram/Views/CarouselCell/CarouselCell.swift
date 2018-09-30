@@ -9,8 +9,7 @@
 import UIKit
 import GLKit
 
-extension CGRect
-{
+extension CGRect {
     func aspectFitInRect(target: CGRect) -> CGRect {
         let scale: CGFloat = {
             let scale = target.width / self.width
@@ -18,12 +17,12 @@ extension CGRect
                 scale :
                 target.height / self.height
         }()
-      
+
         let width = self.width * scale
         let height = self.height * scale
         let xPos = target.midX - width / 2
         let yPos = target.midY - height / 2
-      
+
         return CGRect(x: xPos,
                       y: yPos,
                       width: width,
@@ -46,29 +45,29 @@ class CarouselCell: UICollectionViewCell, GLKViewDelegate {
             }
         }
     }
-    
+
     var eaglContext: EAGLContext! {
         willSet {
             glkView.context = newValue
         }
     }
     var ciContext: CIContext!
-  
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-    
+
     func glkView(_ view: GLKView, drawIn rect: CGRect) {
         guard let ciImage = filteredImage else {return}
-        
+
         let drawableRect = CGRect(origin: CGPoint.zero,
                                      size: CGSize(width: glkView.drawableWidth,
                                                   height: glkView.drawableHeight))
-        
+
         let targetRect = ciImage.extent.aspectFitInRect(
             target: drawableRect)
-        
+
         ciContext.draw(ciImage,
                        in: targetRect,
                        from: ciImage.extent)

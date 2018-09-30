@@ -9,32 +9,32 @@
 import UIKit
 
 class ImageSelectionVC: UIViewController, ErrorPresenting, OpenSettings {
-  
+
   @IBOutlet weak var nextButton: UIBarButtonItem!
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var rightImageView: UIImageView!
   @IBOutlet weak var centerImageView: UIImageView!
   @IBOutlet weak var leftImageView: UIImageView!
-  
+
   var selectedIndexPath: IndexPath?
   let tableViewDataSource = TableViewDataSource()
   let tableViewDelegate = TableViewDelegate()
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Panoramas"
   }
-  
+
   override func viewDidAppear(_ animated: Bool) {
     checkPermission()
     //        tableView.reloadData()
-    
+
     self.tableView.dataSource = tableViewDataSource
     self.tableView.delegate = tableViewDelegate
     tableViewDelegate.delegate = self
     self.tableView.separatorColor = UIColor.clear
   }
-  
+
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let selectedIndexPath =
       (tableView.dataSource as? TableViewDataSource)?.selectedIndexPath,
@@ -43,10 +43,10 @@ class ImageSelectionVC: UIViewController, ErrorPresenting, OpenSettings {
       tableView.cellForRow(at: selectedIndexPath) as? ImageSelectionCell else {
         return
     }
-    
+
     dVC.panoramaImage = selectedCell.panoramaImageView.image
   }
-  
+
   @IBAction func nextTapped(_ sender: UIBarButtonItem) {
     performSegue(withIdentifier: "imageEditSegue", sender: nil)
   }
@@ -60,17 +60,16 @@ extension ImageSelectionVC {
         DispatchQueue.main.async {
           self?.tableView.reloadData()
         }
-        
-      }
-      else {
+
+      } else {
         DispatchQueue.main.async {
           guard let unwrappedSelf = self else {
             fatalError("self is nil")
           }
-          
+
           let osv = OpenSettingsView(frame: CGRect.zero, delegate: unwrappedSelf)
           self?.view.addSubview(osv)
-          
+
           osv.snp.makeConstraints({ (make) in
             make.edges.equalToSuperview()
           })
@@ -78,19 +77,17 @@ extension ImageSelectionVC {
       }
     }
   }
-  
+
   func cacheImages() {
     do {
       try PhotosManager.sharedManager.cacheImages()
-    }
-    catch FetchError.collectionFetchError {
+    } catch FetchError.collectionFetchError {
       self.displayAlert(title: "Panoramas not found", message: "Looks like you don't have any panoramas. Open the Camera app to click a panoramic image and come back here to edit it.", action: nil)
-    }
-    catch {
-      
+    } catch {
+
     }
   }
-  
+
   func openSettings() {
     UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
   }
@@ -111,5 +108,5 @@ extension ImageSelectionVC: CellSelected {
 }
 
 extension ImageSelectionVC: UITableViewDelegate {
-  
+
 }

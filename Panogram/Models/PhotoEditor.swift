@@ -68,21 +68,17 @@ class PhotoEditor {
                     }
                 }
             }
-            
+
             if googleNetPlacesOutputs.count > 0 {
                 var index = 0
-                
                 let leftSortedDictArray = googleNetPlacesOutputs[0].sceneLabelProbs.sorted(by: byValue)
-                
                 let centerSortedDictArray = googleNetPlacesOutputs[1].sceneLabelProbs.sorted(by: byValue)
-
                 let rightSortedDictArray = googleNetPlacesOutputs[2].sceneLabelProbs.sorted(by: byValue)
 
                 while tags.count < 9 {
                     tags.insert(leftSortedDictArray[index].key)
                     tags.insert(centerSortedDictArray[index].key)
                     tags.insert(rightSortedDictArray[index].key)
-                    
                     index += 1
                 }
             }

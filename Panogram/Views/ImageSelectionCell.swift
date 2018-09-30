@@ -13,7 +13,7 @@ class ImageSelectionCell: UITableViewCell {
 
     @IBOutlet weak var panoramaImageView: UIImageView!
     @IBOutlet weak var selectedImageView: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,7 +30,7 @@ class ImageSelectionCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func setSelected(_ selected: Bool) {
         selectedImageView.isHidden = !selected
     }

@@ -11,7 +11,7 @@ import UIKit
 class StackContainerView: UIView {
 
     var height = 1.0
-    
+
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 1.0, height: height)
     }

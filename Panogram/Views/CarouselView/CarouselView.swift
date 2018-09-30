@@ -13,44 +13,44 @@ class CarouselView: UIView {
   @IBOutlet var contentView: UIView!
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var collectionViewLayout: UICollectionViewFlowLayout!
-  
+
   var eaglContext: EAGLContext!
   var ciContext: CIContext!
-  
+
   lazy var images = [UIImage]()
   var filteredImages: [CIImage]! {
     didSet {
       collectionView.reloadData()
     }
   }
-  
+
   private var indexOfCellBeforeDragging = 0
 
   override init(frame: CGRect) {
     super.init(frame: frame)
     fatalError()
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     initializeView()
   }
-  
+
   func initializeView() {
     Bundle.main.loadNibNamed("CarouselView", owner: self, options: nil)
     addSubview(contentView)
 
     let carouselCellNib = UINib(nibName: "CarouselCell", bundle: nil)
-    
+
     collectionView.register(carouselCellNib, forCellWithReuseIdentifier: "CarouselCell")
-    
+
     contentView.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
     }
-    
+
     collectionViewLayout.minimumLineSpacing = 0
   }
-  
+
   var collectionViewWidth: CGFloat {
     return collectionViewLayout.collectionView!.frame.size.width
   }
@@ -58,31 +58,31 @@ class CarouselView: UIView {
   var collectionViewHeight: CGFloat {
     return collectionViewLayout.collectionView!.frame.size.height
   }
-  
+
   private func configureCollectionViewLayoutItemSize() {
     let inset: CGFloat = calculateSectionInset()
-    
+
     collectionViewLayout.sectionInset = UIEdgeInsets(top: 0, left: inset, bottom: 0, right: inset)
-    
+
     collectionViewLayout.itemSize = CGSize(width: collectionViewWidth - inset * 2, height: collectionViewHeight)
-    
+
     collectionViewLayout.collectionView!.reloadData()
   }
-  
+
   override func layoutSubviews() {
     configureCollectionViewLayoutItemSize()
   }
-  
+
   private func calculateSectionInset() -> CGFloat {
     return 100
   }
-  
+
   private func indexOfMajorCell() -> Int {
     let itemWidth = collectionViewLayout.itemSize.width
     let proportionalOffset = collectionViewLayout.collectionView!.contentOffset.x / itemWidth
     return Int(round(proportionalOffset))
   }
-  
+
   func scrollToCenter() {
     let indexPath = IndexPath(row: 1, section: 0)
     collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)

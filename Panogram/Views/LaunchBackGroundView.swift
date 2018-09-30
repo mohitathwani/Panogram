@@ -19,11 +19,11 @@ class LaunchBackgroundView: PastelView {
                               UIColor(hex: 0x123456)])
         startAnimation()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override func layoutIfNeeded() {
         print("boogah")
     }

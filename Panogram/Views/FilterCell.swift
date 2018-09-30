@@ -9,9 +9,6 @@
 import UIKit
 
 class FilterCell: UICollectionViewCell {
-    
     @IBOutlet weak var filterNameLabel: UILabel!
-
     @IBOutlet weak var imageView: UIImageView!
 }
- 
